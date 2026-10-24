@@ -1,0 +1,1887 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+<meta name="theme-color" content="#1B263B">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="스마트랙마스터">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MTIgNTEyIiB3aWR0aD0iNTEyIiBoZWlnaHQ9IjUxMiI+CiAgPGRlZnM+CiAgICA8bGluZWFyR3JhZGllbnQgaWQ9ImJnR3JhZCIgeDE9IjAlIiB5MT0iMCUiIHgyPSIxMDAlIiB5Mj0iMTAwJSI+CiAgICAgIDxzdG9wIG9mZnNldD0iMCUiIHN0b3AtY29sb3I9IiMxRTI5M0IiLz4KICAgICAgPHN0b3Agb2Zmc2V0PSI1MCUiIHN0b3AtY29sb3I9IiMwRjE3MkEiLz4KICAgICAgPHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjMDI4NEM3Ii8+CiAgICA8L2xpbmVhckdyYWRpZW50PgogICAgPGxpbmVhckdyYWRpZW50IGlkPSJmb3JrR3JhZCIgeDE9IjAlIiB5MT0iMCUiIHgyPSIxMDAlIiB5Mj0iMTAwJSI+CiAgICAgIDxzdG9wIG9mZnNldD0iMCUiIHN0b3AtY29sb3I9IiNGNTlFMEIiLz4KICAgICAgPHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjRDk3NzA2Ii8+CiAgICA8L2xpbmVhckdyYWRpZW50PgogICAgPGxpbmVhckdyYWRpZW50IGlkPSJib3hHcmFkIiB4MT0iMCUiIHkxPSIwJSIgeDI9IjEwMCUiIHkyPSIxMDAlIj4KICAgICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzM4QkRGOCIvPgogICAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMwMjg0QzciLz4KICAgIDwvbGluZWFyR3JhZGllbnQ+CiAgPC9kZWZzPgogIDwhLS0gQmFja2dyb3VuZCBTcXVpcmNsZSAtLT4KICA8cmVjdCB3aWR0aD0iNTEyIiBoZWlnaHQ9IjUxMiIgcng9IjExNSIgZmlsbD0idXJsKCNiZ0dyYWQpIi8+CiAgPHJlY3QgeD0iMTIiIHk9IjEyIiB3aWR0aD0iNDg4IiBoZWlnaHQ9IjQ4OCIgcng9IjEwNSIgZmlsbD0ibm9uZSIgc3Ryb2tlPSJyZ2JhKDI1NSwyNTUsMjU1LDAuMTUpIiBzdHJva2Utd2lkdGg9IjYiLz4KICAKICA8IS0tIFJhY2sgRnJhbWUgQmVoaW5kIC0tPgogIDxwYXRoIGQ9Ik0gODAgMTAwIEwgNDMyIDEwMCBNIDgwIDE4MCBMIDQzMiAxODAgTSA4MCAyNjAgTCA0MzIgMjYwIiBzdHJva2U9IiMzMzQxNTUiIHN0cm9rZS13aWR0aD0iOCIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+CiAgPGxpbmUgeDE9IjEyMCIgeTE9IjgwIiB4Mj0iMTIwIiB5Mj0iMjgwIiBzdHJva2U9IiMzMzQxNTUiIHN0cm9rZS13aWR0aD0iOCIvPgogIDxsaW5lIHgxPSIzOTIiIHkxPSI4MCIgeDI9IjM5MiIgeTI9IjI4MCIgc3Ryb2tlPSIjMzM0MTU1IiBzdHJva2Utd2lkdGg9IjgiLz4KCiAgPCEtLSBHb2xkZW4gV2FyZWhvdXNlIC8gRm9ya2xpZnQgR3JhcGhpYyAtLT4KICA8IS0tIFBhbGxldCBCb3ggLS0+CiAgPHJlY3QgeD0iMjUwIiB5PSIxNjAiIHdpZHRoPSIxMzAiIGhlaWdodD0iOTAiIHJ4PSIxNCIgZmlsbD0idXJsKCNib3hHcmFkKSIvPgogIDxsaW5lIHgxPSIyNTAiIHkxPSIyMDUiIHgyPSIzODAiIHkyPSIyMDUiIHN0cm9rZT0iI0JBRTZGRCIgc3Ryb2tlLXdpZHRoPSI0Ii8+CiAgPHRleHQgeD0iMzE1IiB5PSIyMTUiIGZpbGw9IiNGRkZGRkYiIGZvbnQtc2l6ZT0iMjgiIGZvbnQtd2VpZ2h0PSI5MDAiIGZvbnQtZmFtaWx5PSJzYW5zLXNlcmlmIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIj5SQUNLPC90ZXh0PgoKICA8IS0tIEJpZyBGb3JrbGlmdCBGcm9udCBTaWxob3VldHRlIC0tPgogIDwhLS0gTWFzdCAmIEZvcmtzIC0tPgogIDxyZWN0IHg9IjIyNSIgeT0iMTQwIiB3aWR0aD0iMTYiIGhlaWdodD0iMjEwIiByeD0iNCIgZmlsbD0iI0UyRThGMCIvPgogIDxwYXRoIGQ9Ik0gMjMwIDI1MCBMIDM5MCAyNTAgTCAzOTAgMjYyIEwgMjMwIDI2MiBaIiBmaWxsPSIjOTRBM0I4Ii8+CiAgCiAgPCEtLSBGb3JrbGlmdCBCb2R5IC0tPgogIDxwYXRoIGQ9Ik0gMTAwIDM0MCBMIDE3MCAzNDAgTCAxOTUgMjcwIEwgMTUwIDI3MCBaIiBmaWxsPSJ1cmwoI2ZvcmtHcmFkKSIvPgogIDxwYXRoIGQ9Ik0gMTIwIDM0MCBMIDIzMCAzNDAgTCAyMzAgMzc1IEwgMTIwIDM3NSBaIiBmaWxsPSJ1cmwoI2ZvcmtHcmFkKSIvPgogIDwhLS0gT3ZlcmhlYWQgR3VhcmQgKENhYmluKSAtLT4KICA8cGF0aCBkPSJNIDEzMCAyNzAgTCAxODAgMjAwIEwgMjE1IDIwMCBMIDIwNSAyNzAgWiIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjRjhGQUZDIiBzdHJva2Utd2lkdGg9IjEyIiBzdHJva2UtbGluZWpvaW49InJvdW5kIi8+CiAgPCEtLSBCaWcgV2hlZWxzIC0tPgogIDxjaXJjbGUgY3g9IjE0MCIgY3k9IjM3NSIgcj0iMzgiIGZpbGw9IiMwRjE3MkEiIHN0cm9rZT0iI0UyRThGMCIgc3Ryb2tlLXdpZHRoPSI4Ii8+CiAgPGNpcmNsZSBjeD0iMTQwIiBjeT0iMzc1IiByPSIxNiIgZmlsbD0iI0Y1OUUwQiIvPgogIDxjaXJjbGUgY3g9IjIxNSIgY3k9IjM3NSIgcj0iMjgiIGZpbGw9IiMwRjE3MkEiIHN0cm9rZT0iI0UyRThGMCIgc3Ryb2tlLXdpZHRoPSI3Ii8+CiAgPGNpcmNsZSBjeD0iMjE1IiBjeT0iMzc1IiByPSIxMiIgZmlsbD0iI0Y1OUUwQiIvPgoKICA8IS0tIEJhZGdlIExhYmVsIEF0IEJvdHRvbSAtLT4KICA8cmVjdCB4PSI4MCIgeT0iNDIwIiB3aWR0aD0iMzUyIiBoZWlnaHQ9IjUyIiByeD0iMTYiIGZpbGw9InJnYmEoMjU1LDI1NSwyNTUsMC4xMikiIHN0cm9rZT0icmdiYSgyNTUsMjU1LDI1NSwwLjI1KSIgc3Ryb2tlLXdpZHRoPSIyIi8+CiAgPHRleHQgeD0iMjU2IiB5PSI0NTYiIGZpbGw9IiNGOEZBRkMiIGZvbnQtc2l6ZT0iMjYiIGZvbnQtd2VpZ2h0PSI5MDAiIGZvbnQtZmFtaWx5PSInTWFsZ3VuIEdvdGhpYycsIHNhbnMtc2VyaWYiIGxldHRlci1zcGFjaW5nPSIyIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIj7siqTrp4jtirgg656ZIOuniOyKpO2EsDwvdGV4dD4KPC9zdmc+">
+  <link rel="apple-touch-icon" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MTIgNTEyIiB3aWR0aD0iNTEyIiBoZWlnaHQ9IjUxMiI+CiAgPGRlZnM+CiAgICA8bGluZWFyR3JhZGllbnQgaWQ9ImJnR3JhZCIgeDE9IjAlIiB5MT0iMCUiIHgyPSIxMDAlIiB5Mj0iMTAwJSI+CiAgICAgIDxzdG9wIG9mZnNldD0iMCUiIHN0b3AtY29sb3I9IiMxRTI5M0IiLz4KICAgICAgPHN0b3Agb2Zmc2V0PSI1MCUiIHN0b3AtY29sb3I9IiMwRjE3MkEiLz4KICAgICAgPHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjMDI4NEM3Ii8+CiAgICA8L2xpbmVhckdyYWRpZW50PgogICAgPGxpbmVhckdyYWRpZW50IGlkPSJmb3JrR3JhZCIgeDE9IjAlIiB5MT0iMCUiIHgyPSIxMDAlIiB5Mj0iMTAwJSI+CiAgICAgIDxzdG9wIG9mZnNldD0iMCUiIHN0b3AtY29sb3I9IiNGNTlFMEIiLz4KICAgICAgPHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjRDk3NzA2Ii8+CiAgICA8L2xpbmVhckdyYWRpZW50PgogICAgPGxpbmVhckdyYWRpZW50IGlkPSJib3hHcmFkIiB4MT0iMCUiIHkxPSIwJSIgeDI9IjEwMCUiIHkyPSIxMDAlIj4KICAgICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzM4QkRGOCIvPgogICAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMwMjg0QzciLz4KICAgIDwvbGluZWFyR3JhZGllbnQ+CiAgPC9kZWZzPgogIDwhLS0gQmFja2dyb3VuZCBTcXVpcmNsZSAtLT4KICA8cmVjdCB3aWR0aD0iNTEyIiBoZWlnaHQ9IjUxMiIgcng9IjExNSIgZmlsbD0idXJsKCNiZ0dyYWQpIi8+CiAgPHJlY3QgeD0iMTIiIHk9IjEyIiB3aWR0aD0iNDg4IiBoZWlnaHQ9IjQ4OCIgcng9IjEwNSIgZmlsbD0ibm9uZSIgc3Ryb2tlPSJyZ2JhKDI1NSwyNTUsMjU1LDAuMTUpIiBzdHJva2Utd2lkdGg9IjYiLz4KICAKICA8IS0tIFJhY2sgRnJhbWUgQmVoaW5kIC0tPgogIDxwYXRoIGQ9Ik0gODAgMTAwIEwgNDMyIDEwMCBNIDgwIDE4MCBMIDQzMiAxODAgTSA4MCAyNjAgTCA0MzIgMjYwIiBzdHJva2U9IiMzMzQxNTUiIHN0cm9rZS13aWR0aD0iOCIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+CiAgPGxpbmUgeDE9IjEyMCIgeTE9IjgwIiB4Mj0iMTIwIiB5Mj0iMjgwIiBzdHJva2U9IiMzMzQxNTUiIHN0cm9rZS13aWR0aD0iOCIvPgogIDxsaW5lIHgxPSIzOTIiIHkxPSI4MCIgeDI9IjM5MiIgeTI9IjI4MCIgc3Ryb2tlPSIjMzM0MTU1IiBzdHJva2Utd2lkdGg9IjgiLz4KCiAgPCEtLSBHb2xkZW4gV2FyZWhvdXNlIC8gRm9ya2xpZnQgR3JhcGhpYyAtLT4KICA8IS0tIFBhbGxldCBCb3ggLS0+CiAgPHJlY3QgeD0iMjUwIiB5PSIxNjAiIHdpZHRoPSIxMzAiIGhlaWdodD0iOTAiIHJ4PSIxNCIgZmlsbD0idXJsKCNib3hHcmFkKSIvPgogIDxsaW5lIHgxPSIyNTAiIHkxPSIyMDUiIHgyPSIzODAiIHkyPSIyMDUiIHN0cm9rZT0iI0JBRTZGRCIgc3Ryb2tlLXdpZHRoPSI0Ii8+CiAgPHRleHQgeD0iMzE1IiB5PSIyMTUiIGZpbGw9IiNGRkZGRkYiIGZvbnQtc2l6ZT0iMjgiIGZvbnQtd2VpZ2h0PSI5MDAiIGZvbnQtZmFtaWx5PSJzYW5zLXNlcmlmIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIj5SQUNLPC90ZXh0PgoKICA8IS0tIEJpZyBGb3JrbGlmdCBGcm9udCBTaWxob3VldHRlIC0tPgogIDwhLS0gTWFzdCAmIEZvcmtzIC0tPgogIDxyZWN0IHg9IjIyNSIgeT0iMTQwIiB3aWR0aD0iMTYiIGhlaWdodD0iMjEwIiByeD0iNCIgZmlsbD0iI0UyRThGMCIvPgogIDxwYXRoIGQ9Ik0gMjMwIDI1MCBMIDM5MCAyNTAgTCAzOTAgMjYyIEwgMjMwIDI2MiBaIiBmaWxsPSIjOTRBM0I4Ii8+CiAgCiAgPCEtLSBGb3JrbGlmdCBCb2R5IC0tPgogIDxwYXRoIGQ9Ik0gMTAwIDM0MCBMIDE3MCAzNDAgTCAxOTUgMjcwIEwgMTUwIDI3MCBaIiBmaWxsPSJ1cmwoI2ZvcmtHcmFkKSIvPgogIDxwYXRoIGQ9Ik0gMTIwIDM0MCBMIDIzMCAzNDAgTCAyMzAgMzc1IEwgMTIwIDM3NSBaIiBmaWxsPSJ1cmwoI2ZvcmtHcmFkKSIvPgogIDwhLS0gT3ZlcmhlYWQgR3VhcmQgKENhYmluKSAtLT4KICA8cGF0aCBkPSJNIDEzMCAyNzAgTCAxODAgMjAwIEwgMjE1IDIwMCBMIDIwNSAyNzAgWiIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjRjhGQUZDIiBzdHJva2Utd2lkdGg9IjEyIiBzdHJva2UtbGluZWpvaW49InJvdW5kIi8+CiAgPCEtLSBCaWcgV2hlZWxzIC0tPgogIDxjaXJjbGUgY3g9IjE0MCIgY3k9IjM3NSIgcj0iMzgiIGZpbGw9IiMwRjE3MkEiIHN0cm9rZT0iI0UyRThGMCIgc3Ryb2tlLXdpZHRoPSI4Ii8+CiAgPGNpcmNsZSBjeD0iMTQwIiBjeT0iMzc1IiByPSIxNiIgZmlsbD0iI0Y1OUUwQiIvPgogIDxjaXJjbGUgY3g9IjIxNSIgY3k9IjM3NSIgcj0iMjgiIGZpbGw9IiMwRjE3MkEiIHN0cm9rZT0iI0UyRThGMCIgc3Ryb2tlLXdpZHRoPSI3Ii8+CiAgPGNpcmNsZSBjeD0iMjE1IiBjeT0iMzc1IiByPSIxMiIgZmlsbD0iI0Y1OUUwQiIvPgoKICA8IS0tIEJhZGdlIExhYmVsIEF0IEJvdHRvbSAtLT4KICA8cmVjdCB4PSI4MCIgeT0iNDIwIiB3aWR0aD0iMzUyIiBoZWlnaHQ9IjUyIiByeD0iMTYiIGZpbGw9InJnYmEoMjU1LDI1NSwyNTUsMC4xMikiIHN0cm9rZT0icmdiYSgyNTUsMjU1LDI1NSwwLjI1KSIgc3Ryb2tlLXdpZHRoPSIyIi8+CiAgPHRleHQgeD0iMjU2IiB5PSI0NTYiIGZpbGw9IiNGOEZBRkMiIGZvbnQtc2l6ZT0iMjYiIGZvbnQtd2VpZ2h0PSI5MDAiIGZvbnQtZmFtaWx5PSInTWFsZ3VuIEdvdGhpYycsIHNhbnMtc2VyaWYiIGxldHRlci1zcGFjaW5nPSIyIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIj7siqTrp4jtirgg656ZIOuniOyKpO2EsDwvdGV4dD4KPC9zdmc+">
+  <link rel="manifest" href="data:application/manifest+json;base64,ewogICJuYW1lIjogIuyKpOuniO2KuCDrnpkgJiDtlLztgrkg66eI7Iqk7YSwIiwKICAic2hvcnRfbmFtZSI6ICLsiqTrp4jtirjrnpnrp4jsiqTthLAiLAogICJzdGFydF91cmwiOiAiLiIsCiAgImRpc3BsYXkiOiAic3RhbmRhbG9uZSIsCiAgImJhY2tncm91bmRfY29sb3IiOiAiIzE5MUYyOCIsCiAgInRoZW1lX2NvbG9yIjogIiMxQjI2M0IiLAogICJpY29ucyI6IFsKICAgIHsKICAgICAgInNyYyI6ICJkYXRhOmltYWdlL3N2Zyt4bWw7YmFzZTY0LFBITjJaeUI0Yld4dWN6MGlhSFIwY0RvdkwzZDNkeTUzTXk1dmNtY3ZNakF3TUM5emRtY2lJSFpwWlhkQ2IzZzlJakFnTUNBMU1USWdOVEV5SWlCM2FXUjBhRDBpTlRFeUlpQm9aV2xuYUhROUlqVXhNaUkrQ2lBZ1BHUmxabk0rQ2lBZ0lDQThiR2x1WldGeVIzSmhaR2xsYm5RZ2FXUTlJbUpuUjNKaFpDSWdlREU5SWpBbElpQjVNVDBpTUNVaUlIZ3lQU0l4TURBbElpQjVNajBpTVRBd0pTSStDaUFnSUNBZ0lEeHpkRzl3SUc5bVpuTmxkRDBpTUNVaUlITjBiM0F0WTI5c2IzSTlJaU14UlRJNU0wSWlMejRLSUNBZ0lDQWdQSE4wYjNBZ2IyWm1jMlYwUFNJMU1DVWlJSE4wYjNBdFkyOXNiM0k5SWlNd1JqRTNNa0VpTHo0S0lDQWdJQ0FnUEhOMGIzQWdiMlptYzJWMFBTSXhNREFsSWlCemRHOXdMV052Ykc5eVBTSWpNREk0TkVNM0lpOCtDaUFnSUNBOEwyeHBibVZoY2tkeVlXUnBaVzUwUGdvZ0lDQWdQR3hwYm1WaGNrZHlZV1JwWlc1MElHbGtQU0ptYjNKclIzSmhaQ0lnZURFOUlqQWxJaUI1TVQwaU1DVWlJSGd5UFNJeE1EQWxJaUI1TWowaU1UQXdKU0krQ2lBZ0lDQWdJRHh6ZEc5d0lHOW1abk5sZEQwaU1DVWlJSE4wYjNBdFkyOXNiM0k5SWlOR05UbEZNRUlpTHo0S0lDQWdJQ0FnUEhOMGIzQWdiMlptYzJWMFBTSXhNREFsSWlCemRHOXdMV052Ykc5eVBTSWpSRGszTnpBMklpOCtDaUFnSUNBOEwyeHBibVZoY2tkeVlXUnBaVzUwUGdvZ0lDQWdQR3hwYm1WaGNrZHlZV1JwWlc1MElHbGtQU0ppYjNoSGNtRmtJaUI0TVQwaU1DVWlJSGt4UFNJd0pTSWdlREk5SWpFd01DVWlJSGt5UFNJeE1EQWxJajRLSUNBZ0lDQWdQSE4wYjNBZ2IyWm1jMlYwUFNJd0pTSWdjM1J2Y0MxamIyeHZjajBpSXpNNFFrUkdPQ0l2UGdvZ0lDQWdJQ0E4YzNSdmNDQnZabVp6WlhROUlqRXdNQ1VpSUhOMGIzQXRZMjlzYjNJOUlpTXdNamcwUXpjaUx6NEtJQ0FnSUR3dmJHbHVaV0Z5UjNKaFpHbGxiblErQ2lBZ1BDOWtaV1p6UGdvZ0lEd2hMUzBnUW1GamEyZHliM1Z1WkNCVGNYVnBjbU5zWlNBdExUNEtJQ0E4Y21WamRDQjNhV1IwYUQwaU5URXlJaUJvWldsbmFIUTlJalV4TWlJZ2NuZzlJakV4TlNJZ1ptbHNiRDBpZFhKc0tDTmlaMGR5WVdRcElpOCtDaUFnUEhKbFkzUWdlRDBpTVRJaUlIazlJakV5SWlCM2FXUjBhRDBpTkRnNElpQm9aV2xuYUhROUlqUTRPQ0lnY25nOUlqRXdOU0lnWm1sc2JEMGlibTl1WlNJZ2MzUnliMnRsUFNKeVoySmhLREkxTlN3eU5UVXNNalUxTERBdU1UVXBJaUJ6ZEhKdmEyVXRkMmxrZEdnOUlqWWlMejRLSUNBS0lDQThJUzB0SUZKaFkyc2dSbkpoYldVZ1FtVm9hVzVrSUMwdFBnb2dJRHh3WVhSb0lHUTlJazBnT0RBZ01UQXdJRXdnTkRNeUlERXdNQ0JOSURnd0lERTRNQ0JNSURRek1pQXhPREFnVFNBNE1DQXlOakFnVENBME16SWdNall3SWlCemRISnZhMlU5SWlNek16UXhOVFVpSUhOMGNtOXJaUzEzYVdSMGFEMGlPQ0lnYzNSeWIydGxMV3hwYm1WallYQTlJbkp2ZFc1a0lpOCtDaUFnUEd4cGJtVWdlREU5SWpFeU1DSWdlVEU5SWpnd0lpQjRNajBpTVRJd0lpQjVNajBpTWpnd0lpQnpkSEp2YTJVOUlpTXpNelF4TlRVaUlITjBjbTlyWlMxM2FXUjBhRDBpT0NJdlBnb2dJRHhzYVc1bElIZ3hQU0l6T1RJaUlIa3hQU0k0TUNJZ2VESTlJak01TWlJZ2VUSTlJakk0TUNJZ2MzUnliMnRsUFNJak16TTBNVFUxSWlCemRISnZhMlV0ZDJsa2RHZzlJamdpTHo0S0NpQWdQQ0V0TFNCSGIyeGtaVzRnVjJGeVpXaHZkWE5sSUM4Z1JtOXlhMnhwWm5RZ1IzSmhjR2hwWXlBdExUNEtJQ0E4SVMwdElGQmhiR3hsZENCQ2IzZ2dMUzArQ2lBZ1BISmxZM1FnZUQwaU1qVXdJaUI1UFNJeE5qQWlJSGRwWkhSb1BTSXhNekFpSUdobGFXZG9kRDBpT1RBaUlISjRQU0l4TkNJZ1ptbHNiRDBpZFhKc0tDTmliM2hIY21Ga0tTSXZQZ29nSUR4c2FXNWxJSGd4UFNJeU5UQWlJSGt4UFNJeU1EVWlJSGd5UFNJek9EQWlJSGt5UFNJeU1EVWlJSE4wY205clpUMGlJMEpCUlRaR1JDSWdjM1J5YjJ0bExYZHBaSFJvUFNJMElpOCtDaUFnUEhSbGVIUWdlRDBpTXpFMUlpQjVQU0l5TVRVaUlHWnBiR3c5SWlOR1JrWkdSa1lpSUdadmJuUXRjMmw2WlQwaU1qZ2lJR1p2Ym5RdGQyVnBaMmgwUFNJNU1EQWlJR1p2Ym5RdFptRnRhV3g1UFNKellXNXpMWE5sY21sbUlpQjBaWGgwTFdGdVkyaHZjajBpYldsa1pHeGxJajVTUVVOTFBDOTBaWGgwUGdvS0lDQThJUzB0SUVKcFp5QkdiM0pyYkdsbWRDQkdjbTl1ZENCVGFXeG9iM1ZsZEhSbElDMHRQZ29nSUR3aExTMGdUV0Z6ZENBbUlFWnZjbXR6SUMwdFBnb2dJRHh5WldOMElIZzlJakl5TlNJZ2VUMGlNVFF3SWlCM2FXUjBhRDBpTVRZaUlHaGxhV2RvZEQwaU1qRXdJaUJ5ZUQwaU5DSWdabWxzYkQwaUkwVXlSVGhHTUNJdlBnb2dJRHh3WVhSb0lHUTlJazBnTWpNd0lESTFNQ0JNSURNNU1DQXlOVEFnVENBek9UQWdNall5SUV3Z01qTXdJREkyTWlCYUlpQm1hV3hzUFNJak9UUkJNMEk0SWk4K0NpQWdDaUFnUENFdExTQkdiM0pyYkdsbWRDQkNiMlI1SUMwdFBnb2dJRHh3WVhSb0lHUTlJazBnTVRBd0lETTBNQ0JNSURFM01DQXpOREFnVENBeE9UVWdNamN3SUV3Z01UVXdJREkzTUNCYUlpQm1hV3hzUFNKMWNtd29JMlp2Y210SGNtRmtLU0l2UGdvZ0lEeHdZWFJvSUdROUlrMGdNVEl3SURNME1DQk1JREl6TUNBek5EQWdUQ0F5TXpBZ016YzFJRXdnTVRJd0lETTNOU0JhSWlCbWFXeHNQU0oxY213b0kyWnZjbXRIY21Ga0tTSXZQZ29nSUR3aExTMGdUM1psY21obFlXUWdSM1ZoY21RZ0tFTmhZbWx1S1NBdExUNEtJQ0E4Y0dGMGFDQmtQU0pOSURFek1DQXlOekFnVENBeE9EQWdNakF3SUV3Z01qRTFJREl3TUNCTUlESXdOU0F5TnpBZ1dpSWdabWxzYkQwaWJtOXVaU0lnYzNSeWIydGxQU0lqUmpoR1FVWkRJaUJ6ZEhKdmEyVXRkMmxrZEdnOUlqRXlJaUJ6ZEhKdmEyVXRiR2x1WldwdmFXNDlJbkp2ZFc1a0lpOCtDaUFnUENFdExTQkNhV2NnVjJobFpXeHpJQzB0UGdvZ0lEeGphWEpqYkdVZ1kzZzlJakUwTUNJZ1kzazlJak0zTlNJZ2NqMGlNemdpSUdacGJHdzlJaU13UmpFM01rRWlJSE4wY205clpUMGlJMFV5UlRoR01DSWdjM1J5YjJ0bExYZHBaSFJvUFNJNElpOCtDaUFnUEdOcGNtTnNaU0JqZUQwaU1UUXdJaUJqZVQwaU16YzFJaUJ5UFNJeE5pSWdabWxzYkQwaUkwWTFPVVV3UWlJdlBnb2dJRHhqYVhKamJHVWdZM2c5SWpJeE5TSWdZM2s5SWpNM05TSWdjajBpTWpnaUlHWnBiR3c5SWlNd1JqRTNNa0VpSUhOMGNtOXJaVDBpSTBVeVJUaEdNQ0lnYzNSeWIydGxMWGRwWkhSb1BTSTNJaTgrQ2lBZ1BHTnBjbU5zWlNCamVEMGlNakUxSWlCamVUMGlNemMxSWlCeVBTSXhNaUlnWm1sc2JEMGlJMFkxT1VVd1FpSXZQZ29LSUNBOElTMHRJRUpoWkdkbElFeGhZbVZzSUVGMElFSnZkSFJ2YlNBdExUNEtJQ0E4Y21WamRDQjRQU0k0TUNJZ2VUMGlOREl3SWlCM2FXUjBhRDBpTXpVeUlpQm9aV2xuYUhROUlqVXlJaUJ5ZUQwaU1UWWlJR1pwYkd3OUluSm5ZbUVvTWpVMUxESTFOU3d5TlRVc01DNHhNaWtpSUhOMGNtOXJaVDBpY21kaVlTZ3lOVFVzTWpVMUxESTFOU3d3TGpJMUtTSWdjM1J5YjJ0bExYZHBaSFJvUFNJeUlpOCtDaUFnUEhSbGVIUWdlRDBpTWpVMklpQjVQU0kwTlRZaUlHWnBiR3c5SWlOR09FWkJSa01pSUdadmJuUXRjMmw2WlQwaU1qWWlJR1p2Ym5RdGQyVnBaMmgwUFNJNU1EQWlJR1p2Ym5RdFptRnRhV3g1UFNJblRXRnNaM1Z1SUVkdmRHaHBZeWNzSUhOaGJuTXRjMlZ5YVdZaUlHeGxkSFJsY2kxemNHRmphVzVuUFNJeUlpQjBaWGgwTFdGdVkyaHZjajBpYldsa1pHeGxJajdzaXFUcnA0anRpcmdnNjU2WklPdW5pT3lLcE8yRXNEd3ZkR1Y0ZEQ0S1BDOXpkbWMrIiwKICAgICAgInNpemVzIjogIjE5MngxOTIgNTEyeDUxMiIsCiAgICAgICJ0eXBlIjogImltYWdlL3N2Zyt4bWwiLAogICAgICAicHVycG9zZSI6ICJhbnkgbWFza2FibGUiCiAgICB9CiAgXQp9">
+  <title>스마트 랙 & 피킹 마스터</title>
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="🚜 스마트 랙 & 피킹 마스터">
+  <meta property="og:description" content="물류센터 올인원 마스터 컨트롤러 (랙 초성 검색 · 박스 평치 도면 · 선임 가르침 족보)">
+  <meta property="og:url" content="https://byeol-ion.github.io/smart-rack/">
+
+<script src="https://cdn.jsdelivr.net/npm/tesseract.js@5/dist/tesseract.min.js"></script>
+<style>
+  :root {
+    --toss-blue: #3182F6;
+    --toss-blue-dark: #1B64DA;
+    --toss-bg: #F2F4F6;
+    --card-bg: #FFFFFF;
+    --text-primary: #191F28;
+    --text-secondary: #4E5968;
+    --text-muted: #8B95A1;
+    --border-color: #E5E8EB;
+    --orange: #F97316;
+    --green: #10B981;
+    --danger: #F04452;
+    --purple: #7C3AED;
+    --hl-bg: #FEF08A;
+    --hl-text: #991B1B;
+  }
+
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Malgun Gothic', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  body {
+    background-color: var(--toss-bg);
+    color: var(--text-primary);
+    padding-bottom: 84px; /* 하단 탭바 공간 */
+    max-width: 680px;
+    margin: 0 auto;
+    line-height: 1.45;
+  }
+
+  /* 상단 앱 헤더 (토스 스타일) */
+  .app-header {
+    background: #191F28;
+    color: white;
+    padding: 16px 18px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.12);
+  }
+
+  .app-title-wrap {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .app-logo {
+    width: 34px;
+    height: 34px;
+    background: var(--toss-blue);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    font-weight: 900;
+  }
+
+  .app-title {
+    font-size: 1.15rem;
+    font-weight: 800;
+    letter-spacing: -0.4px;
+  }
+
+  .app-sub {
+    font-size: 0.75rem;
+    color: #9CA3AF;
+  }
+
+  .header-btn {
+    background: rgba(255,255,255,0.12);
+    color: #E5E7EB;
+    border: 1px solid rgba(255,255,255,0.2);
+    padding: 6px 11px;
+    border-radius: 8px;
+    font-size: 0.78rem;
+    font-weight: 700;
+    cursor: pointer;
+  }
+
+  /* 탭 컨텐츠 컨테이너 */
+  .tab-view {
+    display: none;
+    padding: 14px;
+    animation: fadeIn 0.18s ease-out;
+  }
+
+  .tab-view.active {
+    display: block;
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(4px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  /* 공통 토스 스타일 카드 */
+  .toss-card {
+    background: var(--card-bg);
+    border-radius: 18px;
+    padding: 16px;
+    margin-bottom: 14px;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
+    border: 1px solid var(--border-color);
+  }
+
+  .card-header {
+    font-size: 1rem;
+    font-weight: 800;
+    color: var(--text-primary);
+    margin-bottom: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .badge-pill {
+    font-size: 0.75rem;
+    font-weight: 800;
+    padding: 3px 9px;
+    border-radius: 12px;
+    background: #EFF6FF;
+    color: var(--toss-blue);
+  }
+
+  /* ================= [탭 1: 랙 검색] ================= */
+  .chosung-grid {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    gap: 6px;
+    margin-bottom: 12px;
+  }
+
+  @media (max-width: 420px) {
+    .chosung-grid {
+      grid-template-columns: repeat(6, 1fr);
+    }
+  }
+
+  .chosung-btn {
+    padding: 10px 2px;
+    font-size: 1rem;
+    font-weight: 900;
+    border-radius: 10px;
+    border: 1px solid #D1D5DB;
+    background: #F9FAFB;
+    color: var(--text-primary);
+    cursor: pointer;
+    text-align: center;
+    transition: all 0.12s;
+  }
+
+  .chosung-btn.active {
+    background: var(--toss-blue);
+    color: white;
+    border-color: var(--toss-blue);
+    box-shadow: 0 3px 8px rgba(49, 130, 246, 0.35);
+  }
+
+  /* 업체 알약 버튼 */
+  .vendor-chips-box {
+    background: #F8FAFC;
+    border-radius: 14px;
+    padding: 10px 12px;
+    border: 1px solid var(--border-color);
+    margin-bottom: 12px;
+  }
+
+  .chips-scroll {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    max-height: 145px;
+    overflow-y: auto;
+  }
+
+  .vendor-chip {
+    background: white;
+    color: var(--text-primary);
+    border: 1.5px solid #CBD5E1;
+    padding: 7px 13px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 800;
+    cursor: pointer;
+  }
+
+  .vendor-chip.active {
+    background: var(--orange);
+    color: white;
+    border-color: var(--orange);
+  }
+
+  /* 즉시 결과 배너 (연우/KIB 스페셜 경고 포함) */
+  .instant-banner {
+    display: none;
+    background: #EFF6FF;
+    border: 2px solid var(--toss-blue);
+    border-radius: 16px;
+    padding: 14px;
+    margin-bottom: 12px;
+  }
+
+  .instant-rack-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 6px;
+  }
+
+  .rack-big-badge {
+    background: var(--toss-blue);
+    color: white;
+    padding: 8px 14px;
+    border-radius: 12px;
+    font-size: 1.2rem;
+    font-weight: 900;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+  }
+
+  .special-alert {
+    margin-top: 10px;
+    background: #FEF2F2;
+    border: 1.5px solid #FCA5A5;
+    border-radius: 10px;
+    padding: 10px 12px;
+    font-size: 0.85rem;
+    color: #991B1B;
+    font-weight: 700;
+    display: none;
+  }
+
+  /* 검색 입력창 + 미니 아이콘 */
+  .search-bar-row {
+    display: flex;
+    gap: 6px;
+    align-items: center;
+  }
+
+  .search-input-wrap {
+    position: relative;
+    flex: 1;
+  }
+
+  .search-input {
+    width: 100%;
+    padding: 12px 36px 12px 14px;
+    font-size: 0.98rem;
+    font-weight: 700;
+    border: 1.5px solid #CBD5E1;
+    border-radius: 12px;
+    outline: none;
+  }
+
+  .search-input:focus {
+    border-color: var(--toss-blue);
+  }
+
+  .clear-x {
+    position: absolute;
+    right: 8px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    border: none;
+    background: #CBD5E1;
+    font-weight: bold;
+    cursor: pointer;
+    display: none;
+  }
+
+  .icon-btn {
+    width: 44px;
+    height: 44px;
+    border-radius: 12px;
+    border: 1.5px solid #CBD5E1;
+    background: white;
+    font-size: 1.2rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* 목록 카드형 테이블 */
+  .rack-item-card {
+    display: flex;
+    align-items: stretch;
+    border-bottom: 1px solid var(--border-color);
+    padding: 12px 6px;
+    gap: 12px;
+  }
+
+  .rack-item-card:last-child {
+    border-bottom: none;
+  }
+
+  .rack-num-box {
+    min-width: 78px;
+    background: #EFF6FF;
+    color: #1D4ED8;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-weight: 900;
+    font-size: 1.05rem;
+    padding: 8px 6px;
+    text-align: center;
+    border: 1px solid #BFDBFE;
+  }
+
+  .rack-info-box {
+    flex: 1;
+  }
+
+  .rack-main-vendors {
+    font-size: 0.98rem;
+    font-weight: 800;
+    color: var(--text-primary);
+    margin-bottom: 3px;
+  }
+
+  .rack-sub-memo {
+    font-size: 0.82rem;
+    color: #0F766E;
+    font-weight: 600;
+  }
+
+  .rack-actions {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 4px;
+  }
+
+  .btn-xs {
+    padding: 4px 8px;
+    font-size: 0.74rem;
+    font-weight: 700;
+    border-radius: 6px;
+    border: 1px solid #CBD5E1;
+    background: white;
+    cursor: pointer;
+  }
+
+  /* ================= [탭 2: 박스 & 랙도면] ================= */
+  .step-box-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+  }
+
+  .step-box-item {
+    border-radius: 12px;
+    padding: 12px 8px;
+    text-align: center;
+  }
+
+  .sb-1 { background: #FEF3C7; border: 1.5px solid #F59E0B; }
+  .sb-2 { background: #E0F2FE; border: 1.5px solid #0284C7; }
+  .sb-3 { background: #FFEDD5; border: 1.5px solid #EA580C; }
+
+  .sb-tag {
+    font-size: 0.7rem;
+    font-weight: 800;
+    padding: 2px 6px;
+    border-radius: 6px;
+    color: white;
+    display: inline-block;
+    margin-bottom: 4px;
+  }
+
+  .outbox-calc-row {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 12px;
+  }
+
+  .zone-summary-item {
+    border-left: 5px solid var(--toss-blue);
+    background: #F8FAFC;
+    padding: 12px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+  }
+
+  .zone-summary-item h4 {
+    font-size: 0.95rem;
+    font-weight: 900;
+    margin-bottom: 4px;
+  }
+
+  .zone-summary-item p {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    font-weight: 600;
+  }
+
+  /* ================= [탭 3: 사석원 족보] ================= */
+  .compare-card {
+    border-radius: 14px;
+    padding: 14px;
+    margin-bottom: 10px;
+    border: 1.5px solid #E2E8F0;
+  }
+
+  .checklist-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 10px;
+    background: #F8FAFC;
+    border-radius: 10px;
+    margin-bottom: 8px;
+    font-size: 0.88rem;
+    font-weight: 700;
+  }
+
+  /* ================= [탭 4: 출근 PC 세팅] ================= */
+  .credential-box {
+    background: #1E293B;
+    color: white;
+    border-radius: 14px;
+    padding: 14px;
+    margin-bottom: 12px;
+  }
+
+  .cred-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.12);
+  }
+
+  .cred-row:last-child { border-bottom: none; }
+
+  .cred-val {
+    font-size: 1.05rem;
+    font-weight: 900;
+    color: #38BDF8;
+  }
+
+  /* ================= [하단 고정 앱 탭바] ================= */
+  .bottom-nav {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    max-width: 680px;
+    margin: 0 auto;
+    background: rgba(255, 255, 255, 0.96);
+    backdrop-filter: blur(10px);
+    border-top: 1px solid var(--border-color);
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    padding: 6px 8px calc(6px + env(safe-area-inset-bottom));
+    z-index: 200;
+    box-shadow: 0 -4px 16px rgba(0,0,0,0.06);
+  }
+
+  .nav-tab {
+    border: none;
+    background: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 6px 2px;
+    cursor: pointer;
+    color: var(--text-muted);
+    border-radius: 12px;
+    transition: all 0.15s;
+  }
+
+  .nav-tab .nav-icon {
+    font-size: 1.3rem;
+    margin-bottom: 2px;
+  }
+
+  .nav-tab .nav-label {
+    font-size: 0.74rem;
+    font-weight: 800;
+  }
+
+  .nav-tab.active {
+    color: var(--toss-blue);
+    background: #EFF6FF;
+  }
+
+  mark.hl {
+    background: var(--hl-bg);
+    color: var(--hl-text);
+    padding: 0 3px;
+    border-radius: 4px;
+    font-weight: 900;
+  }
+
+  /* 모달 팝업 (홈 화면 설치 안내) */
+  .modal-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.55);
+    z-index: 300;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+  }
+
+  .modal-box {
+    background: white;
+    border-radius: 20px;
+    padding: 22px;
+    max-width: 400px;
+    width: 100%;
+  }
+
+  /* ================= [플로팅 퀵 메모 버튼 (FAB)] ================= */
+  .floating-memo-btn {
+    position: fixed;
+    right: 18px;
+    bottom: calc(76px + env(safe-area-inset-bottom));
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #F59E0B 0%, #D97706 100%);
+    color: white;
+    border: 2.5px solid #FFFFFF;
+    box-shadow: 0 6px 22px rgba(217, 119, 6, 0.45);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 190;
+    transition: all 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+    user-select: none;
+  }
+
+  .floating-memo-btn:active {
+    transform: scale(0.92);
+    box-shadow: 0 2px 10px rgba(217, 119, 6, 0.3);
+  }
+
+  .floating-memo-btn .fab-icon {
+    font-size: 1.45rem;
+    line-height: 1;
+  }
+
+  .floating-memo-btn .fab-text {
+    font-size: 0.65rem;
+    font-weight: 900;
+    margin-top: 1px;
+    letter-spacing: -0.3px;
+  }
+
+  /* ================= [퀵 메모 바텀시트 / 서랍 드로어] ================= */
+  .drawer-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 350;
+    align-items: flex-end;
+    justify-content: center;
+    backdrop-filter: blur(2px);
+  }
+
+  .drawer-content {
+    background: white;
+    width: 100%;
+    max-width: 680px;
+    border-radius: 24px 24px 0 0;
+    padding: 20px 18px calc(24px + env(safe-area-inset-bottom));
+    max-height: 88vh;
+    overflow-y: auto;
+    box-shadow: 0 -8px 30px rgba(0,0,0,0.22);
+    animation: drawerSlideUp 0.24s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  @keyframes drawerSlideUp {
+    from { transform: translateY(100%); }
+    to { transform: translateY(0); }
+  }
+
+  .drawer-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 14px;
+    padding-bottom: 10px;
+    border-bottom: 1.5px solid var(--border-color);
+  }
+
+  .drawer-title {
+    font-size: 1.15rem;
+    font-weight: 900;
+    color: var(--text-primary);
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+
+  .drawer-close-btn {
+    background: #F1F5F9;
+    border: none;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    font-size: 1.1rem;
+    font-weight: 800;
+    color: #64748B;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* 빠른 태그 알약 */
+  .tag-pill-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-bottom: 12px;
+  }
+
+  .tag-pill {
+    padding: 6px 11px;
+    border-radius: 16px;
+    font-size: 0.78rem;
+    font-weight: 800;
+    border: 1.5px solid #CBD5E1;
+    background: #F8FAFC;
+    color: #475569;
+    cursor: pointer;
+    transition: all 0.12s;
+  }
+
+  .tag-pill.active {
+    background: var(--orange);
+    color: white;
+    border-color: var(--orange);
+  }
+
+  .input-label-sm {
+    font-size: 0.8rem;
+    font-weight: 800;
+    color: var(--text-secondary);
+    margin-bottom: 5px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  /* 메모 카드 스타일 */
+  .memo-card {
+    background: white;
+    border: 1.5px solid var(--border-color);
+    border-radius: 14px;
+    padding: 14px;
+    margin-bottom: 10px;
+    transition: transform 0.12s, box-shadow 0.12s;
+  }
+
+  .memo-card:active {
+    background: #F9FAFB;
+  }
+
+  .memo-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+  }
+
+  .memo-tag-badge {
+    background: #FEF3C7;
+    color: #B45309;
+    padding: 3px 8px;
+    border-radius: 6px;
+    font-size: 0.74rem;
+    font-weight: 900;
+  }
+
+  .memo-speaker-badge {
+    background: #EFF6FF;
+    color: #1D4ED8;
+    padding: 3px 8px;
+    border-radius: 6px;
+    font-size: 0.74rem;
+    font-weight: 800;
+  }
+
+  .memo-date-text {
+    font-size: 0.72rem;
+    color: var(--text-muted);
+    font-weight: 600;
+  }
+
+  .memo-card-title {
+    font-size: 0.98rem;
+    font-weight: 900;
+    color: var(--text-primary);
+    margin-bottom: 6px;
+    line-height: 1.35;
+  }
+
+  .memo-card-body {
+    font-size: 0.86rem;
+    color: var(--text-secondary);
+    line-height: 1.5;
+    white-space: pre-line;
+    word-break: break-word;
+    background: #F8FAFC;
+    padding: 10px 12px;
+    border-radius: 8px;
+    border-left: 3.5px solid var(--orange);
+    margin-bottom: 10px;
+  }
+
+  .memo-actions-row {
+    display: flex;
+    justify-content: flex-end;
+    gap: 6px;
+  }
+
+</style>
+</head>
+<body>
+
+  <!-- 상단 앱 헤더 -->
+  <header class="app-header">
+    <div class="app-title-wrap">
+      <div class="app-logo">🚜</div>
+      <div>
+        <div class="app-title">스마트 랙 & 피킹 마스터</div>
+        <div class="app-sub">별이온 형 전용 · 올인원 물류 컨트롤러</div>
+      </div>
+    </div>
+    <div style="display:flex; gap:6px;">
+      <button class="header-btn" onclick="openInstallGuide()">📲 앱설치법</button>
+      <button class="header-btn" onclick="resetToDefault()">초기화</button>
+    </div>
+  </header>
+
+  <!-- ==================== [탭 1: 랙 번호 초고속 검색] ==================== -->
+  <main id="tab-search" class="tab-view active">
+    <div class="toss-card">
+      <div class="card-header">
+        <span>⚡ 1단계: 초성 원터치 선택</span>
+        <span id="countBadge" class="badge-pill">전체 21개 구역</span>
+      </div>
+      <div id="chosungBar" class="chosung-grid"></div>
+
+      <div class="vendor-chips-box">
+        <div style="display:flex; justify-content:space-between; font-size:0.78rem; font-weight:800; color:var(--text-secondary); margin-bottom:6px;">
+          <span>👆 2단계: 업체명 터치 시 즉시 랙 위치 표시</span>
+          <span style="color:var(--orange); cursor:pointer;" onclick="clearSearch()">[전체보기]</span>
+        </div>
+        <div id="vendorChips" class="chips-scroll"></div>
+      </div>
+
+      <!-- 검색 즉시 대형 결과 배너 -->
+      <div id="instantBanner" class="instant-banner">
+        <div style="font-size:0.82rem; font-weight:800; color:#1E40AF;">📍 찾아가야 할 랙 번호:</div>
+        <div id="instantBadges" class="instant-rack-list"></div>
+        <!-- 연우 / KIB / 서진 등 특별 주의사항 자동 팝업 -->
+        <div id="specialAlert" class="special-alert"></div>
+      </div>
+
+      <!-- 하단 입력창 + 미니 카메라/음성 아이콘 -->
+      <input type="file" id="cameraInput" accept="image/*" capture="environment" style="display:none;" onchange="handleCameraCapture(event)">
+      <div class="search-bar-row">
+        <div class="search-input-wrap">
+          <input type="text" id="searchInput" class="search-input" placeholder="직접 검색 (업체명, 초성, 랙번호)..." oninput="handleSearch()">
+          <button id="clearBtn" class="clear-x" onclick="clearSearch()">✕</button>
+        </div>
+        <button class="icon-btn" onclick="triggerCamera()" title="박스 태그 촬영">📷</button>
+        <button class="icon-btn" onclick="triggerVoiceGuide()" title="음성 검색 안내">🎤</button>
+      </div>
+      <div id="scanStatus" style="display:none; margin-top:10px; padding:10px; border-radius:10px; background:#FFF7ED; color:#9A3412; font-size:0.84rem; font-weight:700;"></div>
+    </div>
+
+    <!-- 전체 랙 리스트 카드 -->
+    <div class="toss-card">
+      <div class="card-header">
+        <span>📋 랙 번호별 배치 목록</span>
+        <button class="btn-xs" style="background:#EFF6FF; color:#1D4ED8; border-color:#BFDBFE;" onclick="toggleAddForm()">➕ 업체 추가/수정</button>
+      </div>
+
+      <!-- 숨겨진 업체 추가/수정 폼 -->
+      <div id="addFormBox" style="display:none; background:#F8FAFC; padding:12px; border-radius:12px; margin-bottom:12px; border:1px solid #CBD5E1;">
+        <div id="formTitle" style="font-size:0.88rem; font-weight:800; margin-bottom:8px;">➕ 신규 업체 / 랙 추가</div>
+        <div style="display:flex; flex-direction:column; gap:8px;">
+          <input type="text" id="rackInput" class="search-input" placeholder="랙 번호 (예: 7, 12, 25)">
+          <input type="text" id="mainInput" class="search-input" placeholder="주요 업체명 (예: 서진, 연우)">
+          <input type="text" id="subInput" class="search-input" placeholder="세부 메모 / 특징 (선택)">
+          <div style="display:flex; gap:6px;">
+            <button onclick="saveRow()" style="flex:1; background:var(--toss-blue); color:white; border:none; padding:10px; border-radius:10px; font-weight:800; cursor:pointer;">저장하기</button>
+            <button onclick="cancelEdit()" style="background:#94A3B8; color:white; border:none; padding:10px 16px; border-radius:10px; font-weight:800; cursor:pointer;">닫기</button>
+          </div>
+        </div>
+      </div>
+
+      <div id="rackListContainer"></div>
+    </div>
+  </main>
+
+  <!-- ==================== [탭 2: 아웃박스 & 4T 평치 도면] ==================== -->
+  <section id="tab-map" class="tab-view">
+    <!-- 아웃박스 코드 즉시 판독기 -->
+    <div class="toss-card" style="border: 2px solid var(--orange);">
+      <div class="card-header">
+        <span>📦 신공용 아웃박스(1-1 ~ 5-10) 위치 판독기</span>
+        <span class="badge-pill" style="background:#FFEDD5; color:#C2410C;">덕신 형님 구역</span>
+      </div>
+      <p style="font-size:0.83rem; color:var(--text-secondary); margin-bottom:10px; font-weight:600;">
+        박스 자재코드 밑에 적힌 <b>'몇-몇'</b> 앞자리 버튼을 누르면 놓아야 할 랙을 즉시 알려줍니다! (뒤 숫자가 클수록 큰 박스)
+      </p>
+      <div style="display:grid; grid-template-columns:repeat(3, 1fr); gap:8px; margin-bottom:10px;">
+        <button class="chosung-btn" onclick="showOutboxPos('1-2')">1-1 ~ 2-10</button>
+        <button class="chosung-btn" onclick="showOutboxPos('3')">3-1 ~ 3-10</button>
+        <button class="chosung-btn" onclick="showOutboxPos('4')">4-1 ~ 4-4</button>
+        <button class="chosung-btn" onclick="showOutboxPos('5')">5-1 ~ 5-10</button>
+        <button class="chosung-btn" onclick="showOutboxPos('E')">E (수출용)</button>
+        <button class="chosung-btn" onclick="showOutboxPos('ETC')">코드만(코스알엑스)</button>
+      </div>
+      <div id="outboxResultBox" style="background:#FFFBEB; border:1.5px solid #F59E0B; padding:12px; border-radius:12px; font-size:0.9rem; font-weight:800; color:#9A3412;">
+        👆 위에서 박스에 적힌 번호를 터치해 보세요!
+      </div>
+    </div>
+
+    <!-- 상자 3단계 구조 (단상자 -> 타상자 -> 아웃박스) -->
+    <div class="toss-card">
+      <div class="card-header">
+        <span>🪆 절대 안 헷갈리는 [상자 3단계 구조]</span>
+        <span class="badge-pill">단상자+타상자=지류</span>
+      </div>
+      <div class="step-box-grid">
+        <div class="step-box-item sb-1">
+          <span class="sb-tag" style="background:#D97706;">1단계 (맨 안쪽)</span>
+          <div style="font-size:1rem; font-weight:900; margin-bottom:3px;">단상자</div>
+          <div style="font-size:0.76rem; font-weight:700; color:#334155;">화장품 본품 <b>1개</b>를 감싸는 알록달록 예쁜 개별 상자 (23~26번)</div>
+        </div>
+        <div class="step-box-item sb-2">
+          <span class="sb-tag" style="background:#0284C7;">2단계 (중간 묶음)</span>
+          <div style="font-size:1rem; font-weight:900; margin-bottom:3px;">타상자</div>
+          <div style="font-size:0.76rem; font-weight:700; color:#334155;">단상자들을 <b>여러 개 묶어 담는</b> 흰색/갈색 중간 상자 (27~29번)</div>
+        </div>
+        <div class="step-box-item sb-3">
+          <span class="sb-tag" style="background:#EA580C;">3단계 (맨 바깥)</span>
+          <div style="font-size:1rem; font-weight:900; margin-bottom:3px;">아웃박스</div>
+          <div style="font-size:0.76rem; font-weight:700; color:#334155;">타상자들을 모아 대리점으로 출하하는 <b>맨 겉 택배 상자</b> (1~4, 19~20번)</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 전산 4T (입고대기 평치) 1·2·3순위 -->
+    <div class="toss-card">
+      <div class="card-header">
+        <span>🚜 전산 [4T: 입고대기 평치] 채우는 순서</span>
+        <span class="badge-pill" style="background:#ECFDF5; color:#059669;">반송기 동선 기준</span>
+      </div>
+      <div class="zone-summary-item" style="border-left-color:#10B981; background:#ECFDF5;">
+        <h4 style="color:#065F46;">🥇 1순위 채움: [5번 · 6번 랙 앞쪽]</h4>
+        <p>반송기(화물 승강기) 바로 앞! 무거운 <b>SC(스킨케어) 장타</b>를 최우선으로 채움 (튜브는 거의 없음)</p>
+      </div>
+      <div class="zone-summary-item" style="border-left-color:#F59E0B; background:#FFFBEB;">
+        <h4 style="color:#9A3412;">🥈 2순위 채움: [중간 평치 라인]</h4>
+        <p>동일 품목이 여러 개일 때는 날짜별 <b>[선출 / 후출]</b> 및 하단 수기 수량(만 개 등)을 보고 선입선출!</p>
+      </div>
+      <div class="zone-summary-item" style="border-left-color:#EF4444; background:#FEF2F2; margin-bottom:0;">
+        <h4 style="color:#991B1B;">🥉 3순위 (최후순위): [컨테이너 옆 3단 평치]</h4>
+        <p>이동이 불편해 <b>최대한 비워둬야 할 곳!</b> 5·6번에 자리(5칸 등)가 나면 시간 될 때 즉시 앞으로 당겨올 것!</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== [탭 3: 사석원 선임 핵심 족보] ==================== -->
+  <section id="tab-guide" class="tab-view">
+    <!-- 우리가 실제 적치하는 구역 요약 -->
+    <div class="toss-card" style="background:linear-gradient(135deg, #1E3A8A 0%, #2563EB 100%); color:white;">
+      <div style="font-size:1.05rem; font-weight:900; margin-bottom:8px;">🎯 사석원 선임의 핵심 결론: "우리가 실제 적치하는 곳!"</div>
+      <div style="font-size:0.88rem; line-height:1.55; opacity:0.95;">
+        • <b>앞쪽 우리 담당:</b> <b>[7번 랙 ~ 16번 랙]</b> (그래서 메모장이 7번부터 시작!)<br>
+        • <b>뒤쪽 우리 담당:</b> <b>[23번 랙 ~ 29번 랙]</b> (23~26번=단상자 / 27~29번=타상자)<br>
+        • <b>신경 안 써도 되는 곳:</b> <b>17~22번 & 30~32번</b> (태현 형님이 전담 관리하는 튜브/아웃박스 구역!)
+      </div>
+    </div>
+
+    <!-- 연우 & KIB 박스 모양 판별법 -->
+    <div class="toss-card">
+      <div class="card-header">
+        <span>🔍 업체명이 같아도 '박스 모양'으로 갈리는 곳!</span>
+        <span class="badge-pill" style="background:#FEF2F2; color:#DC2626;">오적치 1순위</span>
+      </div>
+
+      <div class="compare-card" style="background:#EFF6FF; border-color:#93C5FD;">
+        <div style="font-weight:900; color:#1E40AF; font-size:0.96rem; margin-bottom:6px;">① [연우] 일반 박스 vs 파란색 튜브 박스</div>
+        <div style="font-size:0.86rem; color:#1E293B; font-weight:600;">
+          • <b>일반 네모 박스(SC 용기/펌프/캡):</b> 무조건 <b>[12번 랙 앞쪽]</b>!<br>
+          • <b>파란색 길쭉한 박스(신발 속지 든 튜브):</b> <b>[뒤쪽 튜브 구역(17·18·30번대)]</b>!<br>
+          • <b>지류(단상자/타상자):</b> 연우 지류 자리에 본품 부품(캡·펌프) 절대 섞지 말 것!
+        </div>
+      </div>
+
+      <div class="compare-card" style="background:#FDF2F8; border-color:#F9A8D4; margin-bottom:0;">
+        <div style="font-weight:900; color:#9D174D; font-size:0.96rem; margin-bottom:6px;">② [KIB] 일반 SC 박스 vs 분홍색(그린팩) 박스</div>
+        <div style="font-size:0.86rem; color:#1E293B; font-weight:600;">
+          • <b>일반 SC 박스:</b> 무조건 <b>[13번 랙]</b>!<br>
+          • <b>분홍색 박스</b> 또는 박스에 <b>'그린팩'</b>이라 적힌 KIB: 튜브이므로 <b>[뒤쪽 튜브 구역]</b>!
+        </div>
+      </div>
+    </div>
+
+    <!-- 랙별 베테랑 비급 -->
+    <div class="toss-card">
+      <div class="card-header">
+        <span>🚜 랙별 베테랑 지게차 작업 철칙</span>
+      </div>
+      <div class="checklist-item" style="border-left:4px solid #DC2626; background:#FEF2F2;">
+        <span>🚫</span>
+        <div>
+          <b>[7·8번 랙] 4개사(소망·글래스·다린·서진) 외 절대 진입 금지 & 재고이동 금지!</b><br>
+          <span style="font-size:0.82rem; color:#7F1D1D;">• 수량이 5~10박스 적게 남았어도 절대 내려서 합치지 말 것! 특히 <b>7-1번</b>은 절대 손대지 말 것!<br>• <b>서진 18박스 완파렛트</b>는 뚱뚱해서 2개 나란히 넣으면 못 뺌! 반드시 <b>[여유 있는 파렛트 1개 + 완파렛트 1개]</b>로 짝지어 넣을 것!</span>
+        </div>
+      </div>
+
+      <div class="checklist-item" style="border-left:4px solid #7C3AED;">
+        <span>🔢</span>
+        <div>
+          <b>[14·15·16번 앞쪽 1~8번 칸] 1·2단 합체랙 (튜브 장타 전용)</b><br>
+          <span style="font-size:0.82rem; color:var(--text-secondary);">• 평치(4T)로 찍지 말고 기둥에 적힌 <b>[14-00-01]</b>, <b>[15-00-01]</b>, <b>[16-00-01]</b> 코드로 찍을 것! (9번 칸부터는 각자 칸 번호로 적치)</span>
+        </div>
+      </div>
+
+      <div class="checklist-item" style="border-left:4px solid #059669;">
+        <span>📦</span>
+        <div>
+          <b>[17·18번의 오타종] & [25·26번 오타종] & [27~29번 우일/경신]</b><br>
+          <span style="font-size:0.82rem; color:var(--text-secondary);">• 17·18번에 있는 오타종은 튜브와 세트로 나가는 1개 코드 묶음일 뿐! 일반 오타종 단상자는 무조건 <b>[25·26번 고정 랙]</b>으로!<br>• 타상자는 <b>27·28번=우일</b>, <b>29번=경신(FM)</b>!</span>
+        </div>
+      </div>
+
+      <div class="checklist-item" style="border-left:4px solid #F59E0B; margin-bottom:0;">
+        <span>🚒</span>
+        <div>
+          <b>[법적 필수] 소화전 반경 1m 이내 적치 금지 & 100% 동일 업체끼리 적치!</b><br>
+          <span style="font-size:0.82rem; color:var(--text-secondary);">• 소화전 앞은 반드시 간격을 띄울 것!<br>• 5파렛트 이상 '장타'는 일반 랙에 넣지 말 것!<br>• 1단 적치 시 무조건 100% 같은 업체끼리만 모아 놓을 것!</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== [탭 4: 출근 컴퓨터(MES/SAP) & GMP] ==================== -->
+  <section id="tab-pc" class="tab-view">
+    <!-- 로그인 계정 다크 카드 -->
+    <div class="credential-box">
+      <div style="font-size:0.95rem; font-weight:900; margin-bottom:8px; color:#F8FAFC;">🔐 컨테이너 작업 PC 공통 로그인 정보</div>
+      <div class="cred-row">
+        <span style="font-size:0.85rem; color:#CBD5E1;">1. 윈도우 PC 암호</span>
+        <span class="cred-val">amore + 숫자 <small style="font-weight:500; font-size:0.75rem;">(영문)</small></span>
+      </div>
+      <div class="cred-row">
+        <span style="font-size:0.85rem; color:#CBD5E1;">2. MES / SAP 공통 아이디</span>
+        <span class="cred-val" style="color:#FBBF24;">CC101341</span>
+      </div>
+      <div class="cred-row">
+        <span style="font-size:0.85rem; color:#CBD5E1;">3. MES / SAP 공통 비밀번호</span>
+        <span class="cred-val" style="color:#34D399;">제니엘 + 숫자 <small style="font-weight:500; font-size:0.75rem;">(한글)</small></span>
+      </div>
+      <div style="margin-top:8px; font-size:0.78rem; color:#FCA5A5; font-weight:800; text-align:center;">
+        ⚠️ 절대 비밀번호를 5번 이상 틀리면 안 됩니다! (계정 잠김)
+      </div>
+    </div>
+
+    <!-- MES & SAP 켜는 순서 -->
+    <div class="toss-card">
+      <div class="card-header">
+        <span>🖥️ 일찍 출근했을 때 PC 세팅 3단계</span>
+        <span class="badge-pill">건조기 켜고 바로!</span>
+      </div>
+      <div class="checklist-item">
+        <span style="background:#2563EB; color:white; width:24px; height:24px; border-radius:50%; display:flex; align-items:center; justify-content:center; flex-shrink:0;">1</span>
+        <div>
+          <b>[MES] 실행 ➔ [입고 조회] ➔ 표시 숫자를 [10,000(만 개)]로 변경!</b><br>
+          <span style="font-size:0.8rem; color:var(--text-secondary);">• 기본 100개로 두면 100개만 보임. 반드시 <b>10,000</b>으로 바꾸고 조회!<br>• 상태 의미: <b>[입고]</b>=아래서 입고 잡음 / <b>[적치 중]</b>=일부만 적치되어 잔량(미적치) 남음 / <b>[적치 완료]</b>=모두 적치 끝!</span>
+        </div>
+      </div>
+      <div class="checklist-item" style="margin-bottom:0;">
+        <span style="background:#D97706; color:white; width:24px; height:24px; border-radius:50%; display:flex; align-items:center; justify-content:center; flex-shrink:0;">2</span>
+        <div>
+          <b>[SAP (샙)] 실행 ➔ 맨 위 항목 선택 ➔ 로그인 후 [즐겨찾기] 클릭!</b><br>
+          <span style="font-size:0.8rem; color:var(--text-secondary);">• 즐겨찾기 화면이 뜨면 <b>MRP 영역에 [1510]</b> 확인 (옆 칸은 7자리 자재코드 검색용)<br>• <b>아침 출근자는 딱 여기(MES 입고조회 + SAP 즐겨찾기 화면)까지만 켜두면 임무 완료!</b></span>
+        </div>
+      </div>
+    </div>
+
+    <!-- GMP 심사 대비 체크리스트 -->
+    <div class="toss-card" style="border:1.5px solid #FCA5A5;">
+      <div class="card-header">
+        <span style="color:#DC2626;">🛡️ GMP 심사 대비 안전·청결 5대 철칙</span>
+      </div>
+      <div style="font-size:0.86rem; font-weight:700; display:flex; flex-direction:column; gap:7px;">
+        <div>✅ <b>1. 근무 시작 즉시 현장 청소:</b> 작업장 주변 환경 및 청결 유지</div>
+        <div>✅ <b>2. 보호구 3종 완벽 착용:</b> 안전모 · 안전조끼 · 안전화 착용</div>
+        <div>✅ <b>3. 지게차 반듯하게 주차:</b> 지정된 파킹 구역에 똑바로 주차</div>
+        <div>✅ <b>4. 지게차 하차 시 시동 OFF:</b> 잠시 내려갈 때도 시동 끄기가 정석!</div>
+        <div>✅ <b>5. 자리 비울 때 지게차 키(Key) 소지:</b> 키를 뽑아 본인이 직접 소지!</div>
+      </div>
+    </div>
+  </section>
+
+  
+  <!-- ==================== [탭 5: 선임 가르침 실무 메모장] ==================== -->
+  <section id="tab-memo" class="tab-view">
+    <div class="toss-card">
+      <div class="card-header">
+        <span>📝 선임들의 현장 가르침 실무 보관함</span>
+        <span id="memoCountBadge" class="badge-pill" style="background:#FEF3C7; color:#B45309;">6개 기록됨</span>
+      </div>
+      <p style="font-size:0.83rem; color:var(--text-secondary); margin-bottom:12px;">
+        사석원 선임, 태현 님, 반장님이 현장에서 짚어주신 꿀팁과 지게차 요령을 언제든 꺼내보는 나만의 비밀 족보입니다.
+      </p>
+
+      <!-- 메모 검색창 -->
+      <div class="search-input-wrap" style="margin-bottom:10px;">
+        <span class="search-icon">🔍</span>
+        <input type="text" id="memoSearchInput" class="toss-input" placeholder="가르침 검색 (예: 14번, 튜브, 서진, 선입선출...)" oninput="filterMemos()">
+        <button id="memoClearBtn" class="clear-btn" onclick="clearMemoSearch()">✕</button>
+      </div>
+
+      <!-- 빠른 태그 필터 -->
+      <div style="font-size:0.76rem; font-weight:800; color:var(--text-secondary); margin-bottom:6px;">🏷️ 선임별·주제별 모아보기</div>
+      <div class="tag-pill-group" id="memoFilterTagGroup">
+        <button class="tag-pill active" onclick="setMemoTagFilter('')">전체보기</button>
+        <button class="tag-pill" onclick="setMemoTagFilter('사석원선임')">#사석원선임</button>
+        <button class="tag-pill" onclick="setMemoTagFilter('태현님')">#태현님</button>
+        <button class="tag-pill" onclick="setMemoTagFilter('적치요령')">#적치요령</button>
+        <button class="tag-pill" onclick="setMemoTagFilter('단상자')">#단상자</button>
+        <button class="tag-pill" onclick="setMemoTagFilter('출근PC')">#출근PC</button>
+        <button class="tag-pill" onclick="setMemoTagFilter('지게차안전')">#지게차안전</button>
+      </div>
+
+      <!-- 액션 버튼 모음 -->
+      <div style="display:flex; gap:8px; margin-top:10px;">
+        <button onclick="openMemoDrawer()" style="flex:2; background:var(--toss-blue); color:white; border:none; padding:12px; border-radius:12px; font-weight:800; font-size:0.9rem; cursor:pointer; box-shadow:0 3px 10px rgba(49,130,246,0.3);">
+          ➕ 새 가르침 즉시 작성
+        </button>
+        <button onclick="copyAllMemosToClipboard()" style="flex:1.2; background:#F8FAFC; color:var(--text-primary); border:1.5px solid #CBD5E1; padding:12px 6px; border-radius:12px; font-weight:800; font-size:0.82rem; cursor:pointer;">
+          📋 카톡 백업복사
+        </button>
+        <button onclick="resetMemosToDefault()" style="background:#FEE2E2; color:#DC2626; border:1px solid #FCA5A5; padding:12px 10px; border-radius:12px; font-weight:800; font-size:0.78rem; cursor:pointer;">
+          복원
+        </button>
+      </div>
+    </div>
+
+    <!-- 저장된 메모 목록 컨테이너 -->
+    <div id="memoListContainer" style="margin-top:12px;"></div>
+  </section>
+
+  <!-- ==================== [하단 고정 앱 내비게이션 바] ==================== -->
+  <nav class="bottom-nav">
+    <button class="nav-tab active" onclick="switchTab('search', this)">
+      <span class="nav-icon">🔍</span>
+      <span class="nav-label">랙 검색</span>
+    </button>
+    <button class="nav-tab" onclick="switchTab('map', this)">
+      <span class="nav-icon">📦</span>
+      <span class="nav-label">박스·평치</span>
+    </button>
+    <button class="nav-tab" onclick="switchTab('guide', this)">
+      <span class="nav-icon">📘</span>
+      <span class="nav-label">선임 족보</span>
+    </button>
+    <button class="nav-tab" onclick="switchTab('pc', this)">
+      <span class="nav-icon">🖥️</span>
+      <span class="nav-label">출근 PC</span>
+    </button>
+      <button class="nav-tab" onclick="switchTab('memo', this)">
+      <span class="nav-icon">📝</span>
+      <span class="nav-label">선임 메모</span>
+    </button>
+  </nav>
+
+  <!-- 스마트폰 홈화면 아이콘 설치 안내 모달 -->
+  <div id="installModal" class="modal-overlay" onclick="closeInstallGuide()">
+    <div class="modal-box" onclick="event.stopPropagation()">
+      <h3 style="font-size:1.1rem; font-weight:900; margin-bottom:10px;">📲 스마트폰 홈 화면에 앱으로 까는 법</h3>
+      <p style="font-size:0.86rem; color:var(--text-secondary); line-height:1.5; margin-bottom:14px;">
+        1. 이 파일을 카카오톡 <b>'나와의 채팅'</b>으로 보낸 뒤 스마트폰에서 엽니다.<br><br>
+        2. 우측 상단(또는 하단) 점 3개 메뉴 <b>[⋮]</b>를 누르고 <b>[다른 브라우저로 열기 (크롬/삼성인터넷)]</b>를 누릅니다.<br><br>
+        3. 브라우저 메뉴에서 <b>[홈 화면에 추가]</b>를 누르면 스마트폰 바탕화면에 <b>🚜 전용 앱 아이콘</b>이 생성되어 토스처럼 1초 만에 켜집니다!
+      </p>
+      <button onclick="closeInstallGuide()" style="width:100%; background:var(--toss-blue); color:white; border:none; padding:12px; border-radius:12px; font-weight:800; cursor:pointer;">확인했어요</button>
+    </div>
+  </div>
+
+<script>
+  const DEFAULT_DATA = [
+    { id: 1, rack: "1, 2, 3, 4", main: "아웃박스", sub: "-" },
+    { id: 2, rack: "5", main: "출고대기", sub: "-" },
+    { id: 3, rack: "6, 4A-01", main: "입고대기", sub: "-" },
+    { id: 4, rack: "7, 8", main: "소망, 퍼시픽글라스(베르상스)(앞) 서진, 다린(뒤)", sub: "딱4개만" },
+    { id: 5, rack: "9", main: "수입, TJS(티제이에스), 태진, 장업(MU 제이유), 동산", sub: "-" },
+    { id: 6, rack: "10", main: "태진, TJS, 두성, BNF(비앤에프), 수입", sub: "-" },
+    { id: 7, rack: "11", main: "태진, 원일, 한일, 삼원피앤디, 유니젠, 펌텍, 태가, 우창", sub: "-" },
+    { id: 8, rack: "12", main: "연우, 선일, 엠보틀, SPS(에스피에스), 모드팩, 탭코리아, 태가, 국일", sub: "-" },
+    { id: 9, rack: "13", main: "장업(SC 제이유), 아폴로, 마사끼코리아, ITN(아이티앤컴퍼니), 천경, 신영, 이화피앤씨, 성원, 일창, 국일, 신광", sub: "-" },
+    { id: 10, rack: "14", main: "KIB(케이아이비), 신광", sub: "-" },
+    { id: 11, rack: "15, 16", main: "튜브 장타(부국, 아이팩, 튜브플러스, KIB, 연우)", sub: "-" },
+    { id: 12, rack: "17, 18", main: "(튜브플러스)", sub: "태현 님 관리" },
+    { id: 13, rack: "19, 20", main: "(아웃박스, 아이팩)", sub: "태현 님 관리" },
+    { id: 14, rack: "17, 18, 19, 20", main: "아웃박스", sub: "-" },
+    { id: 15, rack: "21, 22", main: "차경", sub: "신경 안써도 됨" },
+    { id: 16, rack: "23", main: "고문당, 신성, 신우, 대산, kt, 비피앤피(26까지)", sub: "단상자_선입선출" },
+    { id: 17, rack: "24", main: "고문당, 태신, 코스알엑스", sub: "단상자_선입선출" },
+    { id: 18, rack: "25, 26", main: "오타종", sub: "단상자_선입선출/변하지않음" },
+    { id: 19, rack: "27, 28", main: "우일", sub: "타상자" },
+    { id: 20, rack: "29", main: "경신", sub: "타상자" },
+    { id: 21, rack: "30, 31, 32", main: "튜브 단타", sub: "-" }
+  ];
+
+  // 특별 주의 업체 경고 메시지 사전
+  const SPECIAL_WARNINGS = {
+    "연우": "🚨 [연우 랙 분리 주의!] 일반 박스(SC 용기/캡/펌프)는 [12번 랙]! 파란색 길쭉한 튜브 장타/단타는 [15·16번 / 30~32번 튜브구역]!",
+    "kib": "🚨 [KIB 랙 분리 주의!] 일반 SC 박스는 [14번 랙]! 분홍색 박스 또는 '그린팩'이라 적힌 튜브는 [15·16번 / 30~32번 튜브구역]!",
+    "케이아이비": "🚨 [KIB(케이아이비) 주의!] 일반 SC 박스는 [14번 랙]! 분홍색(그린팩) 튜브 박스는 [15·16번 / 30~32번 튜브구역]!",
+    "장업": "🚨 [장업 주의!] 메이크업(MU 제이유)은 [9번 랙]! 스킨케어(SC 제이유)는 [13번 랙]입니다!",
+    "제이유": "🚨 [장업(제이유) 주의!] MU 제이유는 [9번 랙], SC 제이유는 [13번 랙]입니다!",
+    "베르상스": "🚨 [퍼시픽글라스(베르상스)] 유리용기이므로 [7, 8번 랙 앞쪽]에 배치합니다! (딱 4개사만)",
+    "서진": "🚨 [서진 주의!] [7, 8번 랙 뒤쪽] 전용입니다. 18박스 완파렛트는 폭이 넓어 [여유 있는 파렛트 1개 + 완파렛트 1개]로 넣으세요!",
+    "오타종": "🚨 [오타종 주의!] 일반 오타종 단상자는 무조건 [25·26번 고정 랙]입니다! (선입선출 필수)",
+    "다린": "🚨 [다린 = 선앤엘] 파란색 플라스틱 박스로 오며 [7, 8번 랙 뒤쪽]입니다! (딱 4개사만)"
+  };
+
+  const STORAGE_KEY = "risa_smart_master_v3";
+  let rackData = [];
+  let editingId = null;
+  let selectedChosung = "";
+
+  const CHOSUNG = ['ㄱ','ㄲ','ㄴ','ㄷ','ㄸ','ㄹ','ㅁ','ㅂ','ㅃ','ㅅ','ㅆ','ㅇ','ㅈ','ㅉ','ㅊ','ㅋ','ㅌ','ㅍ','ㅎ'];
+  const MAIN_CHOSUNG = ['전체','ㄱ','ㄴ','ㄷ','ㄹ','ㅁ','ㅂ','ㅅ','ㅇ','ㅈ','ㅊ','ㅋ','ㅌ','ㅍ','ㅎ','A-Z'];
+
+  function getChosung(str) {
+    let result = "";
+    for (let i = 0; i < str.length; i++) {
+      const code = str.charCodeAt(i) - 44032;
+      if (code > -1 && code < 11172) {
+        result += CHOSUNG[Math.floor(code / 588)];
+      } else {
+        result += str.charAt(i);
+      }
+    }
+    return result;
+  }
+
+  function switchTab(tabName, btnEl) {
+    document.querySelectorAll('.tab-view').forEach(el => el.classList.remove('active'));
+    document.querySelectorAll('.nav-tab').forEach(el => el.classList.remove('active'));
+    const targetTab = document.getElementById('tab-' + tabName);
+    if (targetTab) targetTab.classList.add('active');
+    
+    if (btnEl) {
+      btnEl.classList.add('active');
+    } else {
+      const tabs = document.querySelectorAll('.nav-tab');
+      tabs.forEach(t => {
+        if (t.getAttribute('onclick') && t.getAttribute('onclick').includes(`'${tabName}'`)) {
+          t.classList.add('active');
+        }
+      });
+    }
+    
+    // 플로팅 버튼 토글: 메모 탭 자체에서는 가림, 다른 4개 탭에서는 언제든 보이게 노출
+    const floatBtn = document.getElementById('floatingMemoBtn');
+    if (floatBtn) {
+      floatBtn.style.display = (tabName === 'memo') ? 'none' : 'flex';
+    }
+
+    if (tabName === 'memo') {
+      renderMemos();
+    }
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
+  function loadData() {
+    const saved = localStorage.getItem(STORAGE_KEY);
+    if (saved) {
+      try { rackData = JSON.parse(saved); } catch (e) { rackData = [...DEFAULT_DATA]; }
+    } else {
+      rackData = [...DEFAULT_DATA];
+    }
+    buildChosungBar();
+    buildVendorChips();
+    renderList();
+  }
+
+  function saveDataToStorage() {
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(rackData));
+    buildVendorChips();
+  }
+
+  function buildChosungBar() {
+    const bar = document.getElementById("chosungBar");
+    bar.innerHTML = MAIN_CHOSUNG.map(c => {
+      const isAct = (selectedChosung === "" && c === "전체") || selectedChosung === c ? "active" : "";
+      return `<button class="chosung-btn ${isAct}" onclick="filterByChosung('${c}')">${c}</button>`;
+    }).join("");
+  }
+
+  function filterByChosung(c) {
+    selectedChosung = (c === "전체" || selectedChosung === c) ? "" : c;
+    buildChosungBar();
+    buildVendorChips();
+  }
+
+  function getAllVendorKeywords() {
+    const set = new Set(["그린팩", "선앤엘", "대동리빙", "하늘실업"]);
+    rackData.forEach(row => {
+      row.main.split(/[,/]+/).forEach(token => {
+        const clean = token.replace(/\(.*?\)|★|메인|단상자|타상자|신공용.*|1~8번.*|전담.*/g, "").trim();
+        if (clean.length >= 2 && !/^\d+$/.test(clean)) set.add(clean);
+      });
+    });
+    return Array.from(set).sort((a, b) => a.localeCompare(b, 'ko'));
+  }
+
+  function buildVendorChips() {
+    const container = document.getElementById("vendorChips");
+    let vendors = getAllVendorKeywords();
+    const currentQ = document.getElementById("searchInput").value.trim();
+
+    if (selectedChosung) {
+      if (selectedChosung === "A-Z") {
+        vendors = vendors.filter(v => /^[A-Za-z]/.test(v));
+      } else {
+        vendors = vendors.filter(v => getChosung(v.charAt(0)) === selectedChosung);
+      }
+    }
+
+    container.innerHTML = vendors.map(v => {
+      const isActive = currentQ.toLowerCase() === v.toLowerCase() ? "active" : "";
+      return `<button class="vendor-chip ${isActive}" onclick="selectChip('${v}')">${v}</button>`;
+    }).join("");
+  }
+
+  function selectChip(vendorName) {
+    const input = document.getElementById("searchInput");
+    if (input.value.trim() === vendorName) {
+      clearSearch();
+    } else {
+      input.value = vendorName;
+      handleSearch();
+    }
+  }
+
+  function highlightText(text, query) {
+    if (!query) return text;
+    const escaped = query.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+    const regex = new RegExp(`(${escaped})`, 'gi');
+    return text.replace(regex, '<mark class="hl">$1</mark>');
+  }
+
+  function handleSearch() {
+    const q = document.getElementById("searchInput").value.trim();
+    document.getElementById("clearBtn").style.display = q ? "block" : "none";
+    buildVendorChips();
+    renderList(q);
+  }
+
+  function clearSearch() {
+    document.getElementById("searchInput").value = "";
+    selectedChosung = "";
+    document.getElementById("clearBtn").style.display = "none";
+    document.getElementById("scanStatus").style.display = "none";
+    buildChosungBar();
+    buildVendorChips();
+    renderList("");
+  }
+
+  function renderList(query = "") {
+    const container = document.getElementById("rackListContainer");
+    const instantBanner = document.getElementById("instantBanner");
+    const instantBadges = document.getElementById("instantBadges");
+    const specialAlert = document.getElementById("specialAlert");
+    const qLower = query.toLowerCase();
+
+    const filtered = rackData.filter(item => {
+      if (!qLower) return true;
+      const fullText = `${item.rack} ${item.main} ${item.sub}`.toLowerCase();
+      const chosungText = getChosung(fullText);
+      return fullText.includes(qLower) || chosungText.includes(qLower);
+    });
+
+    document.getElementById("countBadge").innerText = query
+      ? `검색됨 ${filtered.length}개`
+      : `전체 ${rackData.length}개 구역`;
+
+    if (qLower && filtered.length > 0) {
+      instantBanner.style.display = "block";
+      instantBadges.innerHTML = filtered.map(item =>
+        `<div class="rack-big-badge">랙 [${item.rack}]번 <span style="font-size:0.82rem; font-weight:600; opacity:0.9;">(${item.main.split(',')[0]})</span></div>`
+      ).join("");
+
+      // 특별 주의 업체 체크
+      let warnMsg = "";
+      for (const key in SPECIAL_WARNINGS) {
+        if (qLower.includes(key)) {
+          warnMsg = SPECIAL_WARNINGS[key];
+          break;
+        }
+      }
+      if (warnMsg) {
+        specialAlert.style.display = "block";
+        specialAlert.innerText = warnMsg;
+      } else {
+        specialAlert.style.display = "none";
+      }
+    } else {
+      instantBanner.style.display = "none";
+    }
+
+    if (filtered.length === 0) {
+      container.innerHTML = `<div style="padding:30px; text-align:center; color:var(--text-muted); font-weight:700;">❌ '${query}' 검색 결과가 없습니다.</div>`;
+      return;
+    }
+
+    container.innerHTML = filtered.map(item => `
+      <div class="rack-item-card">
+        <div class="rack-num-box">
+          <span style="font-size:0.7rem; color:#64748B; font-weight:700;">RACK</span>
+          <span>${highlightText(item.rack, query)}</span>
+        </div>
+        <div class="rack-info-box">
+          <div class="rack-main-vendors">${highlightText(item.main, query)}</div>
+          <div class="rack-sub-memo">${highlightText(item.sub || "-", query)}</div>
+        </div>
+        <div class="rack-actions">
+          <button class="btn-xs" onclick="startEdit(${item.id})">수정</button>
+          <button class="btn-xs" style="color:#DC2626;" onclick="deleteRow(${item.id})">삭제</button>
+        </div>
+      </div>
+    `).join("");
+  }
+
+  // 아웃박스 위치 즉시 판독기
+  function showOutboxPos(codeType) {
+    const box = document.getElementById("outboxResultBox");
+    const map = {
+      "1-2": "📍 [1번 랙] 입니다! (1-1부터 1-10, 이어서 2-1부터 2-10까지 순서대로 배치)",
+      "3": "📍 [2번 랙] 입니다! (2번 랙 맨 앞은 무조건 3-1부터 시작 ~ 3-10까지)",
+      "4": "📍 [3~4번 특수 광폭 1·2단 랙 앞쪽] 입니다! (박스 작고 완파렛트 별로 없는 소량)",
+      "5": "📍 [3~4번 특수 광폭 1·2단 랙] 입니다! (완파렛트 많은 주력 대형 박스 / ※6-1과 헷갈리지 말 것!)",
+      "E": "📍 [19~20번 랙 뒤쪽] 입니다! (앞에 'E'가 적힌 진한 갈색 수출용 박스)",
+      "ETC": "📍 [19~20번 랙] 또는 [2번 랙 앞쪽] 입니다! ('몇-몇' 없이 7580 등 7자리 코드만 적힌 코스알엑스/에뛰드 겉상자)"
+    };
+    box.innerHTML = map[codeType] || "";
+  }
+
+  function toggleAddForm() {
+    const box = document.getElementById("addFormBox");
+    box.style.display = box.style.display === "none" ? "block" : "none";
+  }
+
+  function saveRow() {
+    const r = document.getElementById("rackInput").value.trim();
+    const m = document.getElementById("mainInput").value.trim();
+    const s = document.getElementById("subInput").value.trim() || "-";
+    if (!r || !m) { alert("랙 번호와 업체명을 입력해 주세요!"); return; }
+
+    if (editingId !== null) {
+      const idx = rackData.findIndex(x => x.id === editingId);
+      if (idx > -1) { rackData[idx].rack = r; rackData[idx].main = m; rackData[idx].sub = s; }
+    } else {
+      const existing = rackData.find(x => x.rack.replace(/\s+/g, '') === r.replace(/\s+/g, ''));
+      if (existing) {
+        if (!existing.main.includes(m)) existing.main += ", " + m;
+        if (s !== "-") existing.sub = existing.sub === "-" ? s : existing.sub + " / " + s;
+      } else {
+        const newId = rackData.length > 0 ? Math.max(...rackData.map(x => x.id)) + 1 : 1;
+        rackData.push({ id: newId, rack: r, main: m, sub: s });
+      }
+    }
+    saveDataToStorage();
+    cancelEdit();
+    handleSearch();
+  }
+
+  function startEdit(id) {
+    const item = rackData.find(x => x.id === id);
+    if (!item) return;
+    editingId = id;
+    document.getElementById("addFormBox").style.display = "block";
+    document.getElementById("formTitle").innerText = `✏️ [${item.rack}번 랙] 수정 중`;
+    document.getElementById("rackInput").value = item.rack;
+    document.getElementById("mainInput").value = item.main;
+    document.getElementById("subInput").value = item.sub === "-" ? "" : item.sub;
+    window.scrollTo({ top: 180, behavior: "smooth" });
+  }
+
+  function cancelEdit() {
+    editingId = null;
+    document.getElementById("rackInput").value = "";
+    document.getElementById("mainInput").value = "";
+    document.getElementById("subInput").value = "";
+    document.getElementById("formTitle").innerText = "➕ 신규 업체 / 랙 추가";
+    document.getElementById("addFormBox").style.display = "none";
+  }
+
+  function deleteRow(id) {
+    const item = rackData.find(x => x.id === id);
+    if (item && confirm(`[${item.rack}번 랙] 항목을 삭제할까요?`)) {
+      rackData = rackData.filter(x => x.id !== id);
+      saveDataToStorage();
+      handleSearch();
+    }
+  }
+
+  function resetToDefault() {
+    if (confirm("초기 원본 데이터로 복구하시겠습니까?")) {
+      rackData = [...DEFAULT_DATA];
+      saveDataToStorage();
+      clearSearch();
+    }
+  }
+
+  function triggerCamera() { document.getElementById("cameraInput").click(); }
+
+  async function handleCameraCapture(event) {
+    const file = event.target.files[0];
+    if (!file) return;
+    const st = document.getElementById("scanStatus");
+    st.style.display = "block";
+    st.innerText = "⏳ 박스 태그 글자를 판독 중입니다...";
+    try {
+      const res = await Tesseract.recognize(file, 'kor+eng');
+      const txt = (res.data.text || "").replace(/\s+/g, "").toLowerCase();
+      const matched = getAllVendorKeywords().filter(v => txt.includes(v.replace(/\s+/g, "").toLowerCase()));
+      if (matched.length > 0) {
+        st.innerText = `✅ [${matched[0]}] 인식 성공!`;
+        document.getElementById("searchInput").value = matched[0];
+        handleSearch();
+      } else {
+        st.innerText = "⚠️ 업체명을 찾지 못했습니다. 위쪽 초성 버튼을 눌러주세요!";
+      }
+    } catch (e) {
+      st.innerText = "⚠️ 오프라인 상태입니다. 초성 버튼을 사용해 주세요!";
+    }
+  }
+
+  function triggerVoiceGuide() {
+    const input = document.getElementById("searchInput");
+    const st = document.getElementById("scanStatus");
+    input.focus();
+    st.style.display = "block";
+    st.innerHTML = "💡 스마트폰 키보드 위쪽의 <b>[🎤 마이크 아이콘]</b>을 누르고 말씀하시거나, 맨 위 <b>[초성 버튼]</b>을 터치하세요!";
+  }
+
+  function openInstallGuide() { document.getElementById("installModal").style.display = "flex"; }
+  function closeInstallGuide() { document.getElementById("installModal").style.display = "none"; }
+
+  
+  // ==================== [선임 가르침 메모 시스템 (localStorage)] ====================
+  const MEMO_STORAGE_KEY = "risa_senior_memos_v2";
+  let memoData = [];
+  let editingMemoId = null;
+  let memoTagFilter = "";
+
+  const DEFAULT_MEMOS = [
+    {
+      id: 1,
+      speaker: "사석원 선임",
+      tag: "적치요령",
+      title: "14번 랙 앞쪽 합체랙 전산코드 주의 (14-00-01)",
+      content: "14번 랙 앞쪽 1~8번은 랙 번호가 각각이 아니라 합체되어 전산 코드가 [14-00-01] 하나로 묶여 있음!\nKIB와 신광 제품이 들어가며, 앞쪽 비어있는 칸 아무 데나 넣고 위치는 머릿속에 기억해야 함.",
+      date: "2026-10-21"
+    },
+    {
+      id: 2,
+      speaker: "태현 님",
+      tag: "튜브플러스",
+      title: "17~20번 랙은 태현 님 전담 구역 (손대지 말 것)",
+      content: "17, 18, 19, 20번 랙은 태현 님이 관리하는 튜브플러스 및 아이팩 아웃박스 전용 구역임.\n내가 임의로 물건을 넣거나 손대지 말고 태현 님께 먼저 확인할 것.",
+      date: "2026-10-21"
+    },
+    {
+      id: 3,
+      speaker: "사석원 선임",
+      tag: "단상자",
+      title: "23~26번 단상자는 선입선출 절대 준수!",
+      content: "23, 24, 25, 26번 랙은 단상자(고문당, 신성, 신우, 대산, 태신, 코스알엑스, 오타종).\n새로 들어온 입고품을 앞에 쌓으면 절대 안 되고, 먼저 입고된 상자를 먼저 출고하는 선입선출 엄격 준수!",
+      date: "2026-10-21"
+    },
+    {
+      id: 4,
+      speaker: "사석원 선임",
+      tag: "적치요령",
+      title: "7·8번 랙 서진 18박스 완파렛트 적치 요령",
+      content: "서진 18박스 완파렛트는 폭이 넓어 양쪽에 완파렛트 2개를 넣으면 안 들어감!\n반드시 [여유 있는 파렛트 1개 + 완파렛트 1개] 조합으로 넣어야 쏙 들어감.",
+      date: "2026-10-21"
+    },
+    {
+      id: 5,
+      speaker: "선임 공통",
+      tag: "출근PC",
+      title: "컨테이너 작업 PC 아침 세팅 요령 & 조회건수 변경",
+      content: "PC 암호: amore + 숫자 / MES·SAP ID: CC101341 / PW: 제니엘 + 숫자.\nMES 입고조회 실행 시 조회건수 500에서 [10000]으로 변경 필수! SAP은 [즐겨찾기] 누르고 MRP [1510] 확인.",
+      date: "2026-10-21"
+    },
+    {
+      id: 6,
+      speaker: "반장/관리자",
+      tag: "지게차안전",
+      title: "지게차 하차 시 시동 OFF & 키(Key) 직접 소지 철칙",
+      content: "지게차에서 잠시 내릴 때도 시동 반드시 OFF!\n자리 비울 때는 지게차 키를 뽑아서 본인이 직접 주머니에 소지해야 GMP 심사 지적 안 받음.",
+      date: "2026-10-22"
+    }
+  ];
+
+  function loadMemos() {
+    const saved = localStorage.getItem(MEMO_STORAGE_KEY);
+    if (saved) {
+      try { memoData = JSON.parse(saved); } catch (e) { memoData = [...DEFAULT_MEMOS]; }
+    } else {
+      memoData = [...DEFAULT_MEMOS];
+    }
+    renderMemos();
+    renderDrawerRecent();
+  }
+
+  function saveMemosToStorage() {
+    localStorage.setItem(MEMO_STORAGE_KEY, JSON.stringify(memoData));
+    renderMemos();
+    renderDrawerRecent();
+  }
+
+  function renderMemos(filterQuery = "") {
+    const container = document.getElementById("memoListContainer");
+    if (!container) return;
+    const q = (filterQuery || document.getElementById("memoSearchInput")?.value || "").trim().toLowerCase();
+    
+    let filtered = memoData.filter(m => {
+      const matchTag = !memoTagFilter || (m.tag && m.tag.includes(memoTagFilter)) || (m.speaker && m.speaker.includes(memoTagFilter));
+      if (!matchTag) return false;
+      if (!q) return true;
+      const full = `${m.speaker} ${m.tag} ${m.title} ${m.content}`.toLowerCase();
+      return full.includes(q);
+    });
+
+    const badge = document.getElementById("memoCountBadge");
+    if (badge) badge.innerText = `${filtered.length}개 표시됨`;
+
+    if (filtered.length === 0) {
+      container.innerHTML = `
+        <div style="background:white; border-radius:14px; padding:35px 20px; text-align:center; border:1px solid var(--border-color); color:var(--text-muted); font-weight:700;">
+          ❌ 찾는 가르침 메모가 없습니다.<br>
+          <span style="font-size:0.8rem; color:var(--toss-blue); cursor:pointer;" onclick="clearMemoSearch()">[전체보기로 돌아가기]</span>
+        </div>`;
+      return;
+    }
+
+    container.innerHTML = filtered.map(m => `
+      <div class="memo-card">
+        <div class="memo-card-header">
+          <div style="display:flex; gap:6px; align-items:center;">
+            <span class="memo-speaker-badge">👤 ${escapeHtml(m.speaker || "선임")}</span>
+            <span class="memo-tag-badge">#${escapeHtml(m.tag || "메모")}</span>
+          </div>
+          <span class="memo-date-text">${escapeHtml(m.date || "")}</span>
+        </div>
+        <div class="memo-card-title">${highlightText(m.title, q)}</div>
+        <div class="memo-card-body">${highlightText(m.content, q)}</div>
+        <div class="memo-actions-row">
+          <button class="btn-xs" onclick="copySingleMemo(${m.id})">📋 복사</button>
+          <button class="btn-xs" style="color:var(--toss-blue);" onclick="editMemoItem(${m.id})">✏️ 수정</button>
+          <button class="btn-xs" style="color:#DC2626;" onclick="deleteMemoItem(${m.id})">🗑️ 삭제</button>
+        </div>
+      </div>
+    `).join("");
+  }
+
+  function renderDrawerRecent() {
+    const container = document.getElementById("drawerRecentMemoList");
+    if (!container) return;
+    const recent = memoData.slice(0, 2);
+    if (recent.length === 0) {
+      container.innerHTML = "<div style='font-size:0.8rem; color:var(--text-muted);'>아직 저장된 가르침이 없습니다.</div>";
+      return;
+    }
+    container.innerHTML = recent.map(m => `
+      <div style="background:#F8FAFC; border:1px solid #E2E8F0; border-radius:10px; padding:8px 10px; margin-bottom:6px; font-size:0.8rem;">
+        <div style="font-weight:800; color:var(--text-primary); margin-bottom:2px;">[${escapeHtml(m.speaker)}] ${escapeHtml(m.title)}</div>
+        <div style="color:var(--text-secondary); white-space:nowrap; overflow:hidden; text-overflow:ellipsis;">${escapeHtml(m.content)}</div>
+      </div>
+    `).join("");
+  }
+
+  function escapeHtml(str) {
+    if (!str) return "";
+    return str.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
+  }
+
+  function filterMemos() {
+    const q = document.getElementById("memoSearchInput").value.trim();
+    document.getElementById("memoClearBtn").style.display = q ? "block" : "none";
+    renderMemos(q);
+  }
+
+  function clearMemoSearch() {
+    const input = document.getElementById("memoSearchInput");
+    if (input) input.value = "";
+    document.getElementById("memoClearBtn").style.display = "none";
+    memoTagFilter = "";
+    updateMemoTagPillActive();
+    renderMemos("");
+  }
+
+  function setMemoTagFilter(tag) {
+    memoTagFilter = tag;
+    updateMemoTagPillActive();
+    renderMemos();
+  }
+
+  function updateMemoTagPillActive() {
+    document.querySelectorAll('#memoFilterTagGroup .tag-pill').forEach(btn => {
+      const txt = btn.innerText.replace('#', '').trim();
+      if ((!memoTagFilter && txt === '전체보기') || (memoTagFilter && txt === memoTagFilter)) {
+        btn.classList.add('active');
+      } else {
+        btn.classList.remove('active');
+      }
+    });
+  }
+
+  function openMemoDrawer(editId = null) {
+    editingMemoId = editId;
+    const drawer = document.getElementById("memoDrawer");
+    drawer.style.display = "flex";
+    
+    if (editId) {
+      const item = memoData.find(x => x.id === editId);
+      if (item) {
+        document.getElementById("drawerModeTitle").innerText = `✏️ [${item.speaker}] 가르침 수정`;
+        document.getElementById("memoInputSpeaker").value = item.speaker;
+        document.getElementById("memoInputTag").value = item.tag;
+        document.getElementById("memoInputTitle").value = item.title;
+        document.getElementById("memoInputContent").value = item.content;
+      }
+    } else {
+      document.getElementById("drawerModeTitle").innerText = "선임 가르침 즉시 메모";
+      document.getElementById("memoInputSpeaker").value = "사석원 선임";
+      document.getElementById("memoInputTag").value = "적치요령";
+      document.getElementById("memoInputTitle").value = "";
+      document.getElementById("memoInputContent").value = "";
+    }
+  }
+
+  function closeMemoDrawer(event) {
+    if (event && event.target !== event.currentTarget) return;
+    document.getElementById("memoDrawer").style.display = "none";
+    editingMemoId = null;
+  }
+
+  function quickFillDrawerTag(speaker, tag) {
+    document.getElementById("memoInputSpeaker").value = speaker;
+    document.getElementById("memoInputTag").value = tag;
+  }
+
+  function saveMemoData() {
+    const speaker = document.getElementById("memoInputSpeaker").value.trim() || "선임";
+    const tag = document.getElementById("memoInputTag").value.trim() || "메모";
+    const title = document.getElementById("memoInputTitle").value.trim();
+    const content = document.getElementById("memoInputContent").value.trim();
+
+    if (!title && !content) {
+      alert("제목 또는 내용을 입력해 주세요!");
+      return;
+    }
+
+    const today = new Date().toISOString().split('T')[0];
+
+    if (editingMemoId !== null) {
+      const idx = memoData.findIndex(x => x.id === editingMemoId);
+      if (idx > -1) {
+        memoData[idx].speaker = speaker;
+        memoData[idx].tag = tag;
+        memoData[idx].title = title || content.slice(0, 20);
+        memoData[idx].content = content;
+        memoData[idx].date = today + " (수정)";
+      }
+    } else {
+      const newId = memoData.length > 0 ? Math.max(...memoData.map(x => x.id)) + 1 : 1;
+      memoData.unshift({
+        id: newId,
+        speaker: speaker,
+        tag: tag,
+        title: title || (content.length > 20 ? content.slice(0, 20) + "..." : content),
+        content: content,
+        date: today
+      });
+    }
+
+    saveMemosToStorage();
+    document.getElementById("memoDrawer").style.display = "none";
+    editingMemoId = null;
+    alert("✅ 선임 가르침 메모가 성공적으로 저장되었습니다!");
+  }
+
+  function editMemoItem(id) {
+    openMemoDrawer(id);
+  }
+
+  function deleteMemoItem(id) {
+    const item = memoData.find(x => x.id === id);
+    if (!item) return;
+    if (confirm(`[${item.title}] 가르침 메모를 삭제하시겠습니까?`)) {
+      memoData = memoData.filter(x => x.id !== id);
+      saveMemosToStorage();
+    }
+  }
+
+  function copySingleMemo(id) {
+    const m = memoData.find(x => x.id === id);
+    if (!m) return;
+    const txt = `[${m.speaker} 가르침 #${m.tag}]\n제목: ${m.title}\n내용: ${m.content}\n(작성일: ${m.date})`;
+    navigator.clipboard.writeText(txt).then(() => {
+      alert("📋 메모 내용이 클립보드에 복사되었습니다! 카톡 등에 붙여넣기 하실 수 있습니다.");
+    }).catch(() => {
+      prompt("아래 텍스트를 복사하세요:", txt);
+    });
+  }
+
+  function copyAllMemosToClipboard() {
+    if (memoData.length === 0) {
+      alert("복사할 가르침 메모가 없습니다.");
+      return;
+    }
+    let allTxt = `🚜 [스마트 랙 & 피킹 마스터 - 선임 가르침 족보 전체 백업]\n`;
+    allTxt += `총 ${memoData.length}건의 가르침 목록입니다.\n`;
+    allTxt += `==================================\n\n`;
+    memoData.forEach((m, idx) => {
+      allTxt += `${idx + 1}. [${m.speaker}] #${m.tag}\n`;
+      allTxt += `▶ ${m.title}\n`;
+      allTxt += `${m.content}\n`;
+      allTxt += `(기록: ${m.date})\n\n`;
+    });
+    navigator.clipboard.writeText(allTxt).then(() => {
+      alert(`📋 전체 ${memoData.length}건의 가르침 메모가 복사되었습니다!\n'나와의 카톡방'에 붙여넣어서 평생 백업해 두세요!`);
+    }).catch(() => {
+      prompt("아래 전체 텍스트를 복사하세요:", allTxt);
+    });
+  }
+
+  function resetMemosToDefault() {
+    if (confirm("초기 선임 가르침 6종 족보로 복원하시겠습니까? (새로 적은 메모는 초기화됩니다)")) {
+      memoData = [...DEFAULT_MEMOS];
+      saveMemosToStorage();
+      alert("초기 가르침 족보로 복구되었습니다!");
+    }
+  }
+
+  function switchToMemoTabAndClose() {
+    document.getElementById("memoDrawer").style.display = "none";
+    editingMemoId = null;
+    const tabs = document.querySelectorAll('.nav-tab');
+    if (tabs.length >= 5) {
+      switchTab('memo', tabs[4]);
+    } else {
+      switchTab('memo');
+    }
+  }
+
+  window.onload = function() { loadData(); loadMemos(); };
+</script>
+
+  <!-- 우측 하단 플로팅 퀵 가르침 메모 버튼 (어느 화면에서든 1초 만에 오픈) -->
+  <button id="floatingMemoBtn" class="floating-memo-btn" onclick="openMemoDrawer()" title="선임 가르침 퀵 메모">
+    <span class="fab-icon">📝</span>
+    <span class="fab-text">선임메모</span>
+  </button>
+
+  <!-- 선임 가르침 즉시 기록/확인 퀵 드로어 (바텀시트) -->
+  <div id="memoDrawer" class="drawer-overlay" onclick="closeMemoDrawer(event)">
+    <div class="drawer-content" onclick="event.stopPropagation()">
+      <div class="drawer-header">
+        <div class="drawer-title">
+          <span style="font-size:1.3rem;">📝</span>
+          <span id="drawerModeTitle">선임 가르침 즉시 메모</span>
+        </div>
+        <button class="drawer-close-btn" onclick="closeMemoDrawer()">✕</button>
+      </div>
+
+      <!-- 음성 입력 안내 배너 -->
+      <div style="background:#EFF6FF; border:1.5px solid #BFDBFE; border-radius:12px; padding:10px 12px; font-size:0.82rem; color:#1E40AF; font-weight:700; margin-bottom:12px; display:flex; align-items:center; gap:8px;">
+        <span style="font-size:1.2rem;">🎤</span>
+        <span>스마트폰 키보드 위의 <b>[마이크 아이콘]</b>을 누르면 말로 술술 적힙니다!</span>
+      </div>
+
+      <!-- 원터치 태그 선택 -->
+      <div class="input-label-sm">
+        <span>🏷️ 빠른 태그 선택 (터치 시 자동 입력)</span>
+      </div>
+      <div class="tag-pill-group" style="margin-bottom:10px;">
+        <button type="button" class="tag-pill" onclick="quickFillDrawerTag('사석원 선임', '적치요령')">#사석원선임</button>
+        <button type="button" class="tag-pill" onclick="quickFillDrawerTag('태현 님', '튜브플러스')">#태현님</button>
+        <button type="button" class="tag-pill" onclick="quickFillDrawerTag('사석원 선임', '단상자')">#단상자</button>
+        <button type="button" class="tag-pill" onclick="quickFillDrawerTag('선임 공통', '적치요령')">#적치요령</button>
+        <button type="button" class="tag-pill" onclick="quickFillDrawerTag('반장/관리자', '지게차안전')">#지게차안전</button>
+        <button type="button" class="tag-pill" onclick="quickFillDrawerTag('선임 공통', '출근PC')">#출근PC</button>
+      </div>
+
+      <div style="display:grid; grid-template-columns: 1fr 1fr; gap:8px; margin-bottom:10px;">
+        <div>
+          <div class="input-label-sm">말씀하신 분 (선임)</div>
+          <input type="text" id="memoInputSpeaker" class="toss-input" placeholder="예: 사석원 선임, 태현 님" value="사석원 선임">
+        </div>
+        <div>
+          <div class="input-label-sm">구분 태그</div>
+          <input type="text" id="memoInputTag" class="toss-input" placeholder="예: 적치요령, 튜브, 서진" value="적치요령">
+        </div>
+      </div>
+
+      <div style="margin-bottom:10px;">
+        <div class="input-label-sm">핵심 가르침 한줄 요약 (제목)</div>
+        <input type="text" id="memoInputTitle" class="toss-input" placeholder="예: 14번 합체랙 앞쪽 KIB 적치 요령">
+      </div>
+
+      <div style="margin-bottom:14px;">
+        <div class="input-label-sm">상세 내용 (팁, 주의사항, 전산코드 등)</div>
+        <textarea id="memoInputContent" class="toss-input" style="height:110px; resize:none; line-height:1.45;" placeholder="선임이 알려주신 디테일한 설명이나 주의사항을 자유롭게 적으세요..."></textarea>
+      </div>
+
+      <div style="display:flex; gap:8px;">
+        <button onclick="saveMemoData()" style="flex:2; background:#F59E0B; color:white; border:none; padding:14px; border-radius:12px; font-weight:900; font-size:1rem; cursor:pointer; box-shadow:0 4px 12px rgba(245,158,11,0.35);">
+          💾 저장하기
+        </button>
+        <button onclick="switchToMemoTabAndClose()" style="flex:1; background:#F1F5F9; color:var(--text-secondary); border:1px solid #CBD5E1; padding:14px 6px; border-radius:12px; font-weight:800; font-size:0.85rem; cursor:pointer;">
+          전체 메모 보기 ➔
+        </button>
+      </div>
+
+      <!-- 최근 작성된 가르침 2개 미리보기 -->
+      <div style="margin-top:18px; border-top:1px dashed #CBD5E1; padding-top:14px;">
+        <div style="font-size:0.82rem; font-weight:800; color:var(--text-secondary); margin-bottom:8px;">⚡ 최근 등록된 가르침 2건</div>
+        <div id="drawerRecentMemoList"></div>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
