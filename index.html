@@ -913,7 +913,7 @@
       <div style="font-size:0.88rem; line-height:1.55; opacity:0.95;">
         • <b>앞쪽 우리 담당:</b> <b>[7번 랙 ~ 16번 랙]</b> (그래서 메모장이 7번부터 시작!)<br>
         • <b>뒤쪽 우리 담당:</b> <b>[23번 랙 ~ 29번 랙]</b> (23~26번=단상자 / 27~29번=타상자)<br>
-        • <b>신경 안 써도 되는 곳:</b> <b>17~22번 & 30~32번</b> (태현 형님이 전담 관리하는 튜브/아웃박스 구역!)
+        • <b>신경 안 써도 되는 곳:</b> <b>17~22번 & 30~32번</b> (태연 형님이 전담 관리하는 튜브/아웃박스 구역!)
       </div>
     </div>
 
@@ -1049,7 +1049,7 @@
         <span id="memoCountBadge" class="badge-pill" style="background:#FEF3C7; color:#B45309;">6개 기록됨</span>
       </div>
       <p style="font-size:0.83rem; color:var(--text-secondary); margin-bottom:12px;">
-        사석원 선임, 태현 님, 반장님이 현장에서 짚어주신 꿀팁과 지게차 요령을 언제든 꺼내보는 나만의 비밀 족보입니다.
+        사석원 선임, 태연 님, 반장님이 현장에서 짚어주신 꿀팁과 지게차 요령을 언제든 꺼내보는 나만의 비밀 족보입니다.
       </p>
 
       <!-- 메모 검색창 -->
@@ -1065,7 +1065,7 @@
         <button class="tag-pill active" onclick="setMemoTagFilter('')">전체보기</button>
         <button class="tag-pill" style="background:#FEF3C7; color:#B45309; border-color:#F59E0B; font-weight:900;" onclick="setMemoTagFilter('현장15훈')">⭐ #현장15훈</button>
         <button class="tag-pill" onclick="setMemoTagFilter('사석원선임')">#사석원선임</button>
-        <button class="tag-pill" onclick="setMemoTagFilter('태현님')">#태현님</button>
+        <button class="tag-pill" onclick="setMemoTagFilter('태연님')">#태연님</button>
         <button class="tag-pill" onclick="setMemoTagFilter('적치요령')">#적치요령</button>
         <button class="tag-pill" onclick="setMemoTagFilter('단상자')">#단상자</button>
         <button class="tag-pill" onclick="setMemoTagFilter('출근PC')">#출근PC</button>
@@ -1140,8 +1140,8 @@
     { id: 9, rack: "13", main: "장업(SC 제이유), 아폴로, 마사끼코리아, ITN(아이티앤컴퍼니), 천경, 신영, 이화피앤씨, 성원, 일창, 국일, 신광", sub: "-" },
     { id: 10, rack: "14", main: "KIB(케이아이비), 신광", sub: "-" },
     { id: 11, rack: "15, 16", main: "튜브 장타(부국, 아이팩, 튜브플러스, KIB, 연우)", sub: "-" },
-    { id: 12, rack: "17, 18", main: "(튜브플러스)", sub: "태현 님 관리" },
-    { id: 13, rack: "19, 20", main: "(아웃박스, 아이팩)", sub: "태현 님 관리" },
+    { id: 12, rack: "17, 18", main: "(튜브플러스)", sub: "태연 님 관리" },
+    { id: 13, rack: "19, 20", main: "(아웃박스, 아이팩)", sub: "태연 님 관리" },
     { id: 14, rack: "17, 18, 19, 20", main: "아웃박스", sub: "-" },
     { id: 15, rack: "21, 22", main: "차경", sub: "신경 안써도 됨" },
     { id: 16, rack: "23", main: "고문당, 신성, 신우, 대산, kt, 비피앤피(26까지)", sub: "단상자_선입선출" },
@@ -1165,7 +1165,7 @@
     "다린": "🚨 [다린 = 선앤엘] 파란색 플라스틱 박스로 오며 [7, 8번 랙 뒤쪽]입니다! (딱 4개사만)"
   };
 
-  const STORAGE_KEY = "risa_smart_master_v3";
+  const STORAGE_KEY = "risa_smart_master_v4";
   let rackData = [];
   let editingId = null;
   let selectedChosung = "";
@@ -1493,7 +1493,7 @@
 
   
   // ==================== [선임 가르침 메모 시스템 (localStorage)] ====================
-  const MEMO_STORAGE_KEY = "risa_senior_memos_v3";
+  const MEMO_STORAGE_KEY = "risa_senior_memos_v4";
   let memoData = [];
   let editingMemoId = null;
   let memoTagFilter = "";
@@ -1556,11 +1556,11 @@ KIB와 신광 제품이 들어가며, 앞쪽 비어있는 칸 아무 데나 넣�
     },
     {
       id: 6,
-      speaker: "태현 님",
+      speaker: "태연 님",
       tag: "튜브플러스",
-      title: "17~20번 랙은 태현 님 전담 구역 (손대지 말 것)",
-      content: "17, 18, 19, 20번 랙은 태현 님이 관리하는 튜브플러스 및 아이팩 아웃박스 전용 구역임.
-내가 임의로 물건을 넣거나 손대지 말고 태현 님께 먼저 확인할 것.",
+      title: "17~20번 랙은 태연 님 전담 구역 (손대지 말 것)",
+      content: "17, 18, 19, 20번 랙은 태연 님이 관리하는 튜브플러스 및 아이팩 아웃박스 전용 구역임.
+내가 임의로 물건을 넣거나 손대지 말고 태연 님께 먼저 확인할 것.",
       date: "2026-10-21"
     },
     {
@@ -1886,7 +1886,7 @@ MES 입고조회 실행 시 조회건수 500에서 [10000]으로 변경 필수! 
       </div>
       <div class="tag-pill-group" style="margin-bottom:10px;">
         <button type="button" class="tag-pill" onclick="quickFillDrawerTag('사석원 선임', '적치요령')">#사석원선임</button>
-        <button type="button" class="tag-pill" onclick="quickFillDrawerTag('태현 님', '튜브플러스')">#태현님</button>
+        <button type="button" class="tag-pill" onclick="quickFillDrawerTag('태연 님', '튜브플러스')">#태연님</button>
         <button type="button" class="tag-pill" onclick="quickFillDrawerTag('사석원 선임', '단상자')">#단상자</button>
         <button type="button" class="tag-pill" onclick="quickFillDrawerTag('선임 공통', '적치요령')">#적치요령</button>
         <button type="button" class="tag-pill" onclick="quickFillDrawerTag('반장/관리자', '지게차안전')">#지게차안전</button>
@@ -1896,7 +1896,7 @@ MES 입고조회 실행 시 조회건수 500에서 [10000]으로 변경 필수! 
       <div style="display:grid; grid-template-columns: 1fr 1fr; gap:8px; margin-bottom:10px;">
         <div>
           <div class="input-label-sm">말씀하신 분 (선임)</div>
-          <input type="text" id="memoInputSpeaker" class="toss-input" placeholder="예: 사석원 선임, 태현 님" value="사석원 선임">
+          <input type="text" id="memoInputSpeaker" class="toss-input" placeholder="예: 사석원 선임, 태연 님" value="사석원 선임">
         </div>
         <div>
           <div class="input-label-sm">구분 태그</div>
